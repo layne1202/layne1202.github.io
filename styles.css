@@ -71,6 +71,18 @@ a[aria-disabled="true"] {
   top: 12px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .side-header {
   position: fixed;
   inset: 0 auto 0 0;
@@ -218,7 +230,7 @@ main,
 }
 
 .section-content {
-  width: min(100%, 960px);
+  width: min(100%, 1200px);
 }
 
 .resume-section:not(.is-visible) .section-content {
@@ -385,6 +397,10 @@ h3 {
 
 p {
   margin: 0 0 1rem;
+}
+
+[data-i18n$=".body"] {
+  white-space: pre-line;
 }
 
 .topic-list,
@@ -723,5 +739,24 @@ address {
   .pub-links a,
   .pub-links span {
     flex: 1 1 auto;
+  }
+}
+/* 首页简介正文区域单独加宽 */
+#about .section-content {
+  width: 100%;
+  max-width: 2800px;
+}
+
+#about .lead {
+  max-width: 2800px;
+}
+
+@media (min-width: 993px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .resume-section {
+    min-height: 100vh;
   }
 }

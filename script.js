@@ -14,9 +14,9 @@
       "nav.activities": "Activities",
       "nav.interests": "Interests",
       "nav.contact": "Contact",
-      "about.eyebrow": "Ph.D. Student in Atmospheric Sciences",
+      "about.eyebrow": "Doctor of Science",
       "about.affiliation": "Department of Atmospheric and Oceanic Sciences · Fudan University · <a href=\"mailto:zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</a>",
-      "about.lead": "AI-driven ocean biogeochemical modeling and applications, ocean spatiotemporal data mining, dissolved oxygen and pCO<sub>2</sub> reconstruction, marine carbon cycle, remote sensing, GIS, and gridded data product development.",
+      "about.lead": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
       "about.bio": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
       "section.projects": "Projects",
       "experience.sdg.title": "Core Member, SDG Center Innovation Research Program",
@@ -26,15 +26,15 @@
       "experience.cas.subtitle": "Remote Sensing Monitoring System for Global Ocean Anomaly Processes",
       "experience.cas.body": "Contributed to marine multi-variable spatiotemporal datasets, dataset validation, batch processing workflows, method integration, and monitoring system development.",
       "section.education": "Education",
-      "education.phd.school": "Fudan University",
+      "education.phd.school": "Department of Atmospheric and Oceanic Sciences, Fudan University",
       "education.phd.subtitle": "Ph.D. Student in Atmospheric Sciences",
-      "education.phd.body": "Department of Atmospheric and Oceanic Sciences. GPA: 3.6/4. Research direction: AI-driven ocean biogeochemical modeling and applications.",
+      "education.phd.body": "GPA: 3.6/4<br>Research direction: AI-driven ocean biogeochemical modeling and applications",
       "education.ms.school": "Aerospace Information Research Institute, Chinese Academy of Sciences",
       "education.ms.subtitle": "M.S. in Resources and Environment",
-      "education.ms.body": "GPA: 3.77/4. Research direction: ocean spatiotemporal data mining.",
-      "education.bs.school": "China University of Petroleum (East China)",
+      "education.ms.body": "GPA: 3.77/4<br>Research direction: ocean spatiotemporal data mining",
+      "education.bs.school": "School of Oceanography and Space Informatics, China University of Petroleum (East China)",
       "education.bs.subtitle": "B.S. in Geographic Information Science",
-      "education.bs.body": "School of Oceanography and Space Informatics. Ranked 3/47 and recommended for graduate admission.",
+      "education.bs.body": "GPA：3.57/4\nRanked 3/47 and recommended for graduate admission",
       "section.research": "Research",
       "research.1": "AI-driven ocean biogeochemical modeling and applications",
       "research.2": "Ocean dissolved oxygen and pCO<sub>2</sub> reconstruction and change assessment",
@@ -53,6 +53,8 @@
       "projects.monitor.body": "Updated and validated remote-sensing analysis datasets for global ocean surface environmental variables, supported batch processing, and integrated ocean spatiotemporal mining methods into a monitoring system.",
       "projects.monitor.stack": "Methods: remote sensing, dataset validation, batch processing, system integration",
       "link.reports": "Reports",
+      "link.dataset": "Dataset",
+      "link.doi": "DOI",
       "link.downloadReport": "Download report",
       "link.news": "Related post",
       "section.patents": "Patents",
@@ -93,13 +95,13 @@
       "section.activities": "Activities",
       "activities.talks.meta": "Academic Talks",
       "activities.talks.title": "Conference Presentations",
-      "activities.talks.body": "Presented at the 1st National Coastal Zone Remote Sensing Conference, the 18th China Geographic Information Science Theory and Method Academic Conference, and the 17th National Ocean Data Assimilation Conference.",
+      "activities.talks.body": "The 1st National Coastal Zone Remote Sensing Conference;\nThe 18th China Geographic Information Science Theory and Method Academic Conference;\nThe 17th National Ocean Data Assimilation Conference.",      
       "activities.review.meta": "Peer Review",
       "activities.review.title": "Journal Review",
       "activities.review.body": "Served as a reviewer for one manuscript submitted to <em>Earth System Science Data</em>.",
       "activities.student.meta": "Student Work",
       "activities.student.title": "Student Leadership",
-      "activities.student.body": "Deputy Minister of the Practice Department, Student Union of the College of Earth Science and Technology, 2018-2019; Vice President of the 3S Association, University Science and Technology Innovation Union, 2018-2019; Captain of the Ocean College Long-distance Running Team, 2019-2021.",
+      "activities.student.body": "Deputy Minister of the Practice Department, Student Union of the College of Earth Science and Technology, 2018-2019;\nVice President of the 3S Association, University Science and Technology Innovation Union, 2018-2019;\nCaptain of the Ocean College Long-distance Running Team, 2019-2021.",
       "section.interests": "Interests",
       "interests.body": "Outside research, I enjoy badminton, fitness training, swimming, running, roller skating, hiking, skiing, rock climbing, and orienteering.",
       "interest.badminton": "Badminton",
@@ -127,27 +129,27 @@
       "nav.activities": "活动",
       "nav.interests": "兴趣",
       "nav.contact": "联系",
-      "about.eyebrow": "大气科学博士研究生",
+      "about.eyebrow": "理学博士",
       "about.affiliation": "复旦大学大气与海洋科学系 · <a href=\"mailto:zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</a>",
-      "about.lead": "人工智能驱动的海洋生物地球化学建模与应用、海洋时空数据挖掘、溶解氧与 pCO<sub>2</sub> 重建、海洋碳循环、遥感、GIS 与网格化数据产品研发。",
+      "about.lead": "我目前是复旦大学大气科学博士研究生，研究兴趣包括海洋时空数据建模、海洋生物地球化学、溶解氧与 pCO<sub>2</sub> 重建、海洋脱氧和机器学习。",
       "about.bio": "我目前是复旦大学大气科学博士研究生，研究兴趣包括海洋时空数据建模、海洋生物地球化学、溶解氧与 pCO<sub>2</sub> 重建、海洋脱氧和机器学习。",
       "section.projects": "项目经历",
-      "experience.sdg.title": "SDG 中心创新研究计划核心成员",
+      "experience.sdg.title": "SDG 中心创新研究计划 --核心成员",
       "experience.sdg.subtitle": "全球海洋溶解氧产品与脱氧机制分析",
       "experience.sdg.body": "构建 Oracle 海洋观测数据库，发展机器学习重建模型，研制全球月尺度网格化溶解氧数据集，并分析氧最小带演变及跨变量关系。",
-      "experience.cas.title": "中国科学院战略性先导科技专项成员",
+      "experience.cas.title": "中国科学院战略性先导科技专项 --成员",
       "experience.cas.subtitle": "全球海洋异常过程遥感监测系统",
       "experience.cas.body": "参与海洋多变量时空数据集建设、数据集验证、批处理流程、方法集成和监测系统开发。",
       "section.education": "教育背景",
-      "education.phd.school": "复旦大学",
-      "education.phd.subtitle": "大气科学博士研究生",
-      "education.phd.body": "大气与海洋科学系。GPA：3.6/4。研究方向：人工智能驱动的海洋生物地球化学建模与应用。",
+      "education.phd.school": "复旦大学大气与海洋科学系",
+      "education.phd.subtitle": "博士-大气科学",
+      "education.phd.body": "GPA：3.6/4<br>研究方向：人工智能驱动的海洋生物地球化学建模与应用",
       "education.ms.school": "中国科学院空天信息创新研究院",
-      "education.ms.subtitle": "资源与环境硕士研究生",
-      "education.ms.body": "GPA：3.77/4。研究方向：海洋时空数据挖掘。",
-      "education.bs.school": "中国石油大学（华东）",
-      "education.bs.subtitle": "地理信息科学本科",
-      "education.bs.body": "海洋与空间信息学院。专业排名 3/47，获得推荐免试研究生资格。",
+      "education.ms.subtitle": "硕士-资源与环境",
+      "education.ms.body": "GPA：3.77/4<br>研究方向：海洋时空数据挖掘",
+      "education.bs.school": "中国石油大学（华东）海洋与空间信息学院",
+      "education.bs.subtitle": "本科-地理信息科学",
+      "education.bs.body": "GPA：3.57/4\n专业排名 3/47，获得推荐免试研究生资格",
       "section.research": "研究方向",
       "research.1": "人工智能驱动的海洋生物地球化学建模与应用",
       "research.2": "海洋溶解氧与 pCO<sub>2</sub> 重建及变化评估",
@@ -166,8 +168,10 @@
       "projects.monitor.body": "更新并验证全球海洋表层环境变量遥感分析数据集，支持批处理，并将海洋时空挖掘方法集成到监测系统中。",
       "projects.monitor.stack": "方法：遥感、数据集验证、批处理、系统集成",
       "link.reports": "报告列表",
+      "link.doi": "查看论文",
+      "link.dataset": "数据集",
       "link.downloadReport": "下载报告",
-      "link.news": "相关推送",
+      "link.news": "公众号推送",
       "section.patents": "专利",
       "patents.1": "薛存金、王振国、岳林峰：一种基于 Argo 温盐剖面的海洋溶解氧浓度重构模型构建方法。CN: 202310062810.9。",
       "patents.2": "薛存金、岳林峰、王振国：一种基于 Argo 的海洋溶解氧空间格模型构建方法。CN: 202211383915.6。",
@@ -177,14 +181,14 @@
       "skills.programming.title": "编程与数据",
       "skills.programming.body": "Python、MATLAB、SQL、Oracle 与空间数据处理。",
       "skills.ml.title": "机器学习",
-      "skills.ml.body": "面向海洋数据重建与分析的机器学习和深度学习方法。",
+      "skills.ml.body": "熟悉sklearn和PyTorch框架。",
       "skills.gis.title": "GIS 与遥感",
       "skills.gis.body": "ArcGIS、QGIS、ENVI、GIS 空间分析与遥感影像处理。",
       "skills.cert.title": "证书",
       "skills.cert.body": "大学英语六级；全国计算机等级考试二级。",
       "section.awards": "奖项荣誉",
       "awards.academic.title": "学术荣誉",
-      "awards.sports.title": "体育与文艺",
+      "awards.sports.title": "文体比赛",
       "awards.academic.1": "国家励志奖学金",
       "awards.academic.2": "测绘系奖学金",
       "awards.academic.3": "科技创新奖学金",
@@ -199,20 +203,20 @@
       "awards.sports.1": "2018 年中国石油大学（华东）校园舞蹈大赛团体一等奖（民族舞）",
       "awards.sports.2": "2019 年中国石油大学（华东）运动会 3000 米障碍赛第 3 名，成绩 11'27''",
       "awards.sports.3": "2020 年中国石油大学（华东）运动会 3000 米障碍赛第 5 名",
-      "awards.sports.4": "2023 年中国科学院空天信息创新研究院研究生 5000 米健身跑第 8 名，成绩 20'21''",
-      "awards.sports.5": "2023 年中国科学院空天信息创新研究院研究生羽毛球比赛男子双打、混合双打冠军",
+      "awards.sports.4": "2023 年中国科学院空天院研究生 5000 米健身跑第 8 名，成绩 20'21''",
+      "awards.sports.5": "2023 年中国科学院空天院研究生羽毛球比赛男子双打、混合双打冠军",
       "awards.sports.6": "2025 年第七届复旦大学羽毛球公开赛男子双打 16 强",
       "awards.sports.7": "2025 年复旦大学大气与海洋科学系师生羽毛球赛男子双打冠军",
       "section.activities": "活动经历",
       "activities.talks.meta": "学术报告",
       "activities.talks.title": "会议报告",
-      "activities.talks.body": "曾参加第一届全国海岸带遥感大会、第十八届中国地理信息科学理论与方法学术年会、第十七届全国海洋资料同化会议并作相关学术交流。",
+      "activities.talks.body": "第一届全国海岸带遥感大会\n第十八届中国地理信息科学理论与方法学术年会\n第十七届全国海洋资料同化会议",
       "activities.review.meta": "同行评审",
       "activities.review.title": "期刊审稿",
-      "activities.review.body": "为 <em>Earth System Science Data</em> 审稿 1 篇。",
+      "activities.review.body": "为 <em>Earth System Science Data</em> 审稿 1 篇",
       "activities.student.meta": "学生工作",
       "activities.student.title": "学生干部经历",
-      "activities.student.body": "2018-2019 年任校地学院学生会实践部副部长；2018-2019 年任校科创联 3S 协会副会长；2019-2021 年任海洋学院长跑队队长。",
+      "activities.student.body": "2018-2019 年任校地学院学生会实践部副部长\n2018-2019 年任校科创联 3S 协会副会长\n2019-2021 年任海洋学院长跑队队长",
       "section.interests": "兴趣爱好",
       "interests.body": "科研之外，我喜欢羽毛球、健身、游泳、跑步、轮滑、爬山、滑雪、攀岩和定向越野。",
       "interest.badminton": "羽毛球",
@@ -244,6 +248,24 @@
     document.querySelectorAll("[data-i18n]").forEach(function (node) {
       const value = dictionary[node.dataset.i18n];
       if (typeof value === "string") node.textContent = value;
+    });
+    document.querySelectorAll("[data-i18n-list]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-list");
+      const value = translations[lang][key];
+    
+      if (!value) return;
+    
+      el.innerHTML = "";
+    
+      value
+        .split("\n")
+        .map((item) => item.trim())
+        .filter(Boolean)
+        .forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          el.appendChild(li);
+        });
     });
 
     document.querySelectorAll("[data-i18n-html]").forEach(function (node) {
@@ -364,4 +386,71 @@
     storedLanguage = "en";
   }
   applyLanguage(storedLanguage);
+})();
+
+(function () {
+  const sections = Array.from(document.querySelectorAll(".resume-section[id]"));
+
+  if (!sections.length) return;
+
+  let isScrolling = false;
+
+  function getCurrentSectionIndex() {
+    const scrollTop = window.scrollY;
+    let currentIndex = 0;
+    let minDistance = Infinity;
+
+    sections.forEach(function (section, index) {
+      const distance = Math.abs(section.offsetTop - scrollTop);
+      if (distance < minDistance) {
+        minDistance = distance;
+        currentIndex = index;
+      }
+    });
+
+    return currentIndex;
+  }
+
+  function scrollToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+
+    isScrolling = true;
+
+    sections[index].scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    history.replaceState(null, "", "#" + sections[index].id);
+
+    setTimeout(function () {
+      isScrolling = false;
+    }, 850);
+  }
+
+  window.addEventListener(
+    "wheel",
+    function (event) {
+      if (window.innerWidth <= 992) return;
+      if (isScrolling) {
+        event.preventDefault();
+        return;
+      }
+
+      const delta = event.deltaY;
+
+      if (Math.abs(delta) < 20) return;
+
+      event.preventDefault();
+
+      const currentIndex = getCurrentSectionIndex();
+
+      if (delta > 0) {
+        scrollToSection(currentIndex + 1);
+      } else {
+        scrollToSection(currentIndex - 1);
+      }
+    },
+    { passive: false }
+  );
 })();

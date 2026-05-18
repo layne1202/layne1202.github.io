@@ -1,7 +1,3 @@
-# Zhenguo Wang Academic Homepage
-
-This is a static English academic homepage for Zhenguo Wang. It is designed for direct deployment on GitHub Pages or any static hosting service.
-
 ## File Structure
 
 ```text
@@ -10,13 +6,6 @@ This is a static English academic homepage for Zhenguo Wang. It is designed for 
 ├── styles.css      # Fixed sidebar CV layout, typography, responsive styles, and animations
 ├── script.js       # Smooth scrolling, language switching, mobile navigation, active section, and skill-bar behavior
 ├── assets/
-│   ├── wzg.png       # Profile image used in the sidebar
-│   └── interests/
-│       ├── badminton.png # Interest gallery image
-│       ├── fitness.jpg   # Interest gallery image
-│       ├── running.jpg   # Interest gallery image
-│       └── hiking.jpg    # Interest gallery image
-├── RESUME.pdf      # Source CV kept locally; currently not linked on the homepage
 └── README.md       # Project notes and deployment instructions
 ```
 
@@ -43,11 +32,6 @@ http://localhost:8000
 5. Select the branch, usually `main`, and the root folder `/`.
 6. Save. GitHub will publish the site after the Pages build finishes.
 
-For the preferred user site repository `layne1202.github.io`, the page will be available at:
-
-```text
-https://layne1202.github.io/
-```
 
 If you later provide a custom domain, add a `CNAME` file containing only that domain name, then configure the same domain in GitHub Pages settings and your DNS provider.
 

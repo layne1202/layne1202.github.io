@@ -1,0 +1,3 @@
+.python-packages/
+.npm-cache/
+.playwright-cli/
