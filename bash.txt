@@ -11,7 +11,7 @@ e:
 
 
 
-
-
+github域名
+https://github.com/DigitalPlatDev/FreeDomain
 https://dash.cloudflare.com/a4436eb505f5dba9daeee03dee877bb5/zhenguowang.dpdns.org/dns/records
 https://dash.domain.digitalplat.org/domains
