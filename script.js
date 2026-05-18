@@ -385,8 +385,8 @@
   } catch (error) {
     storedLanguage = "en";
   }
-  applyLanguage(storedLanguage);
-  //applyLanguage("en");
+  //applyLanguage(storedLanguage);
+  applyLanguage("en");
 })();
 
 (function () {

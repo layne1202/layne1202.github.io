@@ -760,7 +760,7 @@ address {
     min-height: 100vh;
   }
 }
-/* Hide language switcher 
+/* Hide language switcher */
 .language-switcher {
   display: none;
-}*/
+}
