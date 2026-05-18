@@ -1,4 +1,6 @@
 (function () {
+  document.documentElement.classList.add("js");
+
   const translations = {
     en: {
       "nav.about": "About",
@@ -8,6 +10,7 @@
       "nav.publications": "Publications",
       "nav.outputs": "Outputs",
       "nav.projects": "Projects",
+      "nav.experience": "Experience",
       "nav.patents": "Patents",
       "nav.skills": "Skills",
       "nav.awards": "Awards",
@@ -16,7 +19,16 @@
       "nav.contact": "Contact",
       "about.eyebrow": "Doctor of Science",
       "about.affiliation": "Department of Atmospheric and Oceanic Sciences · Fudan University · <a href=\"mailto:zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</a>",
+      "about.title": "AI-driven Ocean Biogeochemical Modeling",
       "about.lead": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
+      "hero.publications": "Publications",
+      "hero.datasets": "Datasets",
+      "hero.contact": "Contact",
+      "hero.panelKicker": "Selected Signals",
+      "hero.signal1.meta": "Dataset",
+      "hero.signal1.body": "Global long-term dissolved oxygen product",
+      "hero.metricPublications": "Publications",
+      "hero.metricPatents": "Patents",
       "about.bio": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
       "section.projects": "Projects",
       "experience.sdg.title": "Core Member, SDG Center Innovation Research Program",
@@ -41,6 +53,12 @@
       "research.3": "Ocean spatiotemporal data mining and gridded data product development",
       "research.4": "OMZ evolution and multi-variable coupling mechanisms, including carbon fluxes",
       "research.5": "Ocean remote sensing, GIS, and environmental monitoring system development",
+      "research.card1.title": "Ocean Oxygen Reconstruction",
+      "research.card1.body": "Machine learning reconstruction of global dissolved oxygen fields from Argo and multi-source observations.",
+      "research.card2.title": "Marine Carbon & pCO<sub>2</sub> Dynamics",
+      "research.card2.body": "Spatiotemporal modeling of carbon-cycle variables, deoxygenation, and coupled ocean biogeochemical change.",
+      "research.card3.title": "AI for Ocean Data Products",
+      "research.card3.body": "Biogeochemistry-aware machine learning, gridded products, remote sensing, GIS, and ocean monitoring systems.",
       "section.publications": "Publications",
       "section.outputs": "Outputs",
       "projects.geoxygen.title": "GEOXYGEN Dissolved Oxygen Concentration Dataset",
@@ -387,6 +405,136 @@
   }
   //applyLanguage(storedLanguage);
   applyLanguage("en");
+})();
+
+(function () {
+  const progress = document.querySelector(".scroll-progress span");
+  const sections = Array.from(document.querySelectorAll(".resume-section[id]"));
+  const canvas = document.querySelector(".ocean-canvas");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function updateProgress() {
+    if (!progress) return;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progress.style.width = Math.max(0, Math.min(100, percent)) + "%";
+  }
+
+  function currentSectionIndex() {
+    const midpoint = window.scrollY + window.innerHeight * 0.38;
+    let index = 0;
+    sections.forEach(function (section, sectionIndex) {
+      if (section.offsetTop <= midpoint) index = sectionIndex;
+    });
+    return index;
+  }
+
+  function goToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+    sections[index].scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    history.replaceState(null, "", "#" + sections[index].id);
+  }
+
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+  updateProgress();
+
+  window.addEventListener("keydown", function (event) {
+    const target = event.target;
+    const isEditable = target && (
+      target.tagName === "INPUT" ||
+      target.tagName === "TEXTAREA" ||
+      target.tagName === "SELECT" ||
+      target.isContentEditable
+    );
+
+    if (isEditable || event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
+
+    if (event.code === "Space") {
+      event.preventDefault();
+      const direction = event.shiftKey ? -1 : 1;
+      goToSection(currentSectionIndex() + direction);
+    }
+  });
+
+  document.querySelectorAll(".tilt-card").forEach(function (card) {
+    card.addEventListener("pointermove", function (event) {
+      if (reduceMotion) return;
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 4;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * -4;
+      card.style.transform = "translateY(-4px) rotateX(" + y.toFixed(2) + "deg) rotateY(" + x.toFixed(2) + "deg)";
+    });
+
+    card.addEventListener("pointerleave", function () {
+      card.style.transform = "";
+    });
+  });
+
+  if (!canvas || reduceMotion) return;
+
+  const context = canvas.getContext("2d");
+  let width = 0;
+  let height = 0;
+  let points = [];
+  let pointerX = 0;
+  let pointerY = 0;
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    width = Math.max(1, Math.floor(rect.width));
+    height = Math.max(1, Math.floor(rect.height));
+    canvas.width = Math.floor(width * ratio);
+    canvas.height = Math.floor(height * ratio);
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    points = Array.from({ length: Math.min(90, Math.floor(width / 14)) }, function (_, index) {
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        phase: index * 0.37,
+        speed: 0.22 + Math.random() * 0.28
+      };
+    });
+  }
+
+  function draw(time) {
+    context.clearRect(0, 0, width, height);
+    context.lineWidth = 1;
+
+    points.forEach(function (point) {
+      point.x += point.speed;
+      point.y += Math.sin(time * 0.001 + point.phase) * 0.18;
+
+      if (point.x > width + 20) point.x = -20;
+
+      const px = point.x + pointerX * 10;
+      const py = point.y + pointerY * 10;
+      context.beginPath();
+      context.arc(px, py, 1.3, 0, Math.PI * 2);
+      context.fillStyle = "rgba(167, 243, 208, 0.58)";
+      context.fill();
+
+      context.beginPath();
+      context.moveTo(px - 18, py + Math.sin(time * 0.001 + point.phase) * 4);
+      context.lineTo(px + 18, py - Math.sin(time * 0.001 + point.phase) * 4);
+      context.strokeStyle = "rgba(76, 201, 240, 0.18)";
+      context.stroke();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener("mousemove", function (event) {
+    pointerX = (event.clientX / window.innerWidth - 0.5) * 2;
+    pointerY = (event.clientY / window.innerHeight - 0.5) * 2;
+  }, { passive: true });
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+  requestAnimationFrame(draw);
 })();
 
 (function () {
