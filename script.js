@@ -386,7 +386,7 @@
     storedLanguage = "en";
   }
   applyLanguage(storedLanguage);
-  applyLanguage("en");
+  //applyLanguage("en");
 })();
 
 (function () {
