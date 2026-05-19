@@ -677,6 +677,8 @@ p {
 
 .figure-preview,
 .gallery-button {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   padding: 0;
@@ -922,6 +924,174 @@ p {
 
 address {
   font-style: normal;
+}
+
+.contact-section {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 58%, rgba(255, 255, 255, 0.5) 100%),
+    url("https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=1800&q=80") center / cover fixed;
+}
+
+.contact-identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.ocean-compass {
+  position: relative;
+  width: 4.2rem;
+  height: 4.2rem;
+  flex: 0 0 4.2rem;
+  border: 1px solid rgba(47, 111, 143, 0.22);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, rgba(47, 111, 143, 0.16) 0 18%, transparent 19%),
+    conic-gradient(from 35deg, rgba(47, 111, 143, 0.12), rgba(95, 168, 199, 0.36), rgba(47, 111, 143, 0.12));
+  box-shadow: 0 0.8rem 1.8rem rgba(33, 37, 41, 0.09);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.ocean-compass::before,
+.ocean-compass::after,
+.ocean-compass span {
+  content: "";
+  position: absolute;
+  inset: 0.72rem;
+  border: 1px solid rgba(47, 111, 143, 0.32);
+  border-radius: 50%;
+}
+
+.ocean-compass::after {
+  inset: 1.65rem 0.72rem;
+  border-width: 0;
+  border-top: 1px solid rgba(47, 111, 143, 0.36);
+  border-radius: 0;
+  transform-origin: center;
+  animation: compass-sweep 8s linear infinite;
+}
+
+.ocean-compass span {
+  inset: 0.4rem;
+  border-style: dashed;
+  animation: compass-rotate 16s linear infinite;
+}
+
+.ocean-compass:hover {
+  filter: saturate(1.25);
+  transform: translateY(-1px);
+}
+
+.contact-motto {
+  max-width: 44rem;
+  margin: 0;
+  color: #465560;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.contact-card {
+  position: relative;
+  display: grid;
+  gap: 0.55rem;
+  width: min(100%, 48rem);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(47, 111, 143, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 1rem 2.4rem rgba(33, 37, 41, 0.08);
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 35%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(47, 111, 143, 0.85), transparent);
+  transition: left 420ms ease;
+}
+
+.contact-card:hover::before,
+.contact-card:focus-within::before {
+  left: 100%;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.contact-email-button {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  padding: 0;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.contact-email-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.28;
+  transform: scaleX(0.35);
+  transform-origin: left;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.contact-email-button:hover::after,
+.contact-email-button:focus::after {
+  opacity: 0.8;
+  transform: scaleX(1);
+}
+
+.footer-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.footer-metrics div {
+  min-width: 8.2rem;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(47, 111, 143, 0.14);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.footer-metrics strong {
+  display: block;
+  color: #243642;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 2.2rem;
+  line-height: 0.95;
+}
+
+.footer-metrics span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+@keyframes compass-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes compass-sweep {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .feedback-box {
@@ -1185,6 +1355,10 @@ body.is-lightbox-open {
     min-height: calc(100vh - 4rem);
     background-attachment: scroll;
   }
+
+  .contact-section {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1285,6 +1459,12 @@ body.dark-mode .hero-section {
     url("https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=1800&q=80") center / cover fixed;
 }
 
+body.dark-mode .contact-section {
+  background:
+    linear-gradient(90deg, rgba(11, 20, 28, 0.95) 0%, rgba(11, 20, 28, 0.86) 58%, rgba(11, 20, 28, 0.62) 100%),
+    url("https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=1800&q=80") center / cover fixed;
+}
+
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -1306,6 +1486,8 @@ body.dark-mode .theme-card,
 body.dark-mode .selected-honors,
 body.dark-mode .photo-strip figure,
 body.dark-mode .news-figure,
+body.dark-mode .contact-card,
+body.dark-mode .footer-metrics div,
 body.dark-mode .useful-panel,
 body.dark-mode .lightbox-panel {
   background: rgba(17, 31, 42, 0.88);
@@ -1337,6 +1519,23 @@ body.dark-mode .copy-toast {
 
 body.dark-mode .lightbox-panel figcaption {
   color: #c8d8e2;
+}
+
+body.dark-mode .contact-motto,
+body.dark-mode .footer-metrics span {
+  color: #c8d8e2;
+}
+
+body.dark-mode .footer-metrics strong {
+  color: #edf4f8;
+}
+
+body.dark-mode .ocean-compass {
+  border-color: rgba(125, 211, 252, 0.24);
+  background:
+    radial-gradient(circle at center, rgba(125, 211, 252, 0.16) 0 18%, transparent 19%),
+    conic-gradient(from 35deg, rgba(125, 211, 252, 0.08), rgba(95, 168, 199, 0.4), rgba(125, 211, 252, 0.08));
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.24);
 }
 
 body.dark-mode .feedback-button {
@@ -1499,6 +1698,36 @@ body.dark-mode .ambient-particles {
 
   .contact-section address p {
     overflow-wrap: anywhere;
+  }
+
+  .contact-identity {
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .ocean-compass {
+    width: 3.3rem;
+    height: 3.3rem;
+    flex-basis: 3.3rem;
+  }
+
+  .contact-card {
+    padding: 0.95rem 1rem;
+  }
+
+  .footer-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .footer-metrics div {
+    min-width: 0;
+    padding: 0.7rem 0.65rem;
+  }
+
+  .footer-metrics strong {
+    font-size: 1.85rem;
   }
 
   .keyword-cloud {

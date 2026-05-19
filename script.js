@@ -136,6 +136,10 @@
       "contact.institutionValue": "Department of Atmospheric and Oceanic Sciences, Fudan University",
       "contact.location": "Location:",
       "contact.locationValue": "Shanghai, China",
+      "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
+      "metrics.publications": "Publications",
+      "metrics.patents": "Patents",
+      "metrics.datasets": "Datasets",
       "feedback.question": "Was this homepage useful?",
       "feedback.yes": "Yes",
       "feedback.thanks": "Thanks for the feedback."
@@ -276,6 +280,10 @@
       "contact.institutionValue": "复旦大学大气与海洋科学系",
       "contact.location": "地点：",
       "contact.locationValue": "中国上海",
+      "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
+      "metrics.publications": "论文",
+      "metrics.patents": "专利",
+      "metrics.datasets": "数据集",
       "feedback.question": "这个主页有帮助吗？",
       "feedback.yes": "有",
       "feedback.thanks": "感谢反馈。"
@@ -461,7 +469,7 @@
       window.setTimeout(function () {
         toast.hidden = true;
       }, 180);
-    }, 1500);
+    }, 1000);
   }
 
   function copyText(text) {
@@ -608,10 +616,13 @@
     triggers[activeIndex]?.focus?.();
   }
 
-  triggers.forEach(function (trigger, index) {
-    trigger.addEventListener("click", function () {
-      open(index);
-    });
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-lightbox-item]");
+    if (!trigger) return;
+    const index = triggers.indexOf(trigger);
+    if (index < 0) return;
+    event.preventDefault();
+    open(index);
   });
 
   lightbox.querySelectorAll("[data-lightbox-close]").forEach(function (button) {
