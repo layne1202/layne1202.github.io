@@ -687,22 +687,6 @@ p {
   transform: translateY(-2px);
 }
 
-.section-title-row {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.signal-pulse {
-  position: relative;
-  width: 0.68rem;
-  height: 0.68rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(47, 111, 143, 0.24);
-  animation: signal-pulse 2.2s ease-out infinite;
-}
-
 .theme-kicker {
   display: inline-block;
   margin-bottom: 0.85rem;
@@ -718,10 +702,7 @@ p {
 }
 
 .news-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 26rem);
-  gap: 2rem;
-  align-items: center;
+  display: block;
 }
 
 .news-list .timeline-item {
@@ -753,7 +734,8 @@ p {
 }
 
 .news-figure {
-  margin: 0;
+  max-width: 34rem;
+  margin: 1rem 0 0;
   padding: 0.7rem;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.82);
@@ -1209,16 +1191,6 @@ address {
 @keyframes compass-sweep {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes signal-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(47, 111, 143, 0.28);
-  }
-  70%,
-  100% {
-    box-shadow: 0 0 0 0.62rem rgba(47, 111, 143, 0);
   }
 }
 
@@ -1716,6 +1688,15 @@ body.dark-mode .ocean-compass {
 
 body.dark-mode .current-line path {
   stroke: #7dd3fc;
+}
+
+body.dark-mode .news-figure {
+  background: #0b141c;
+}
+
+body.dark-mode .news-figure img {
+  mix-blend-mode: multiply;
+  opacity: 0.94;
 }
 
 body.dark-mode .feedback-button {
