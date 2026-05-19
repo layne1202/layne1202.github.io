@@ -3,27 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ask search engines not to index this page -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     <title>Zhenguo Wang | Academic Homepage</title>
     <meta
       name="description"
       content="Academic homepage of Zhenguo Wang, a Ph.D. student at Fudan University working on AI-driven ocean biogeochemical modeling, dissolved oxygen, pCO2, remote sensing, GIS, and gridded ocean data products."
     >
-    <meta property="og:title" content="Zhenguo Wang | Academic Homepage">
+    <meta property="og:title" content="Zhenguo Wang">
     <meta
       property="og:description"
-      content="Research profile, publications, projects, patents, awards, and contact information for Zhenguo Wang."
+      content="AI-driven ocean biogeochemical reconstruction."
     >
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://layne1202.github.io/">
+    <meta property="og:url" content="https://zhenguowang.dpdns.org/">
+    <meta property="og:image" content="https://zhenguowang.dpdns.org/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zhenguo Wang">
+    <meta name="twitter:description" content="AI-driven ocean biogeochemical reconstruction.">
+    <meta name="twitter:image" content="https://zhenguowang.dpdns.org/assets/og-card.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Saira+Extra+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260519a">
+    <link rel="stylesheet" href="styles.css?v=20260519f">
   </head>
   <body id="page-top">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <canvas class="ambient-particles" aria-hidden="true"></canvas>
+    <div class="quick-actions" aria-label="Page tools">
+      <button class="tool-button" type="button" data-dark-toggle aria-pressed="false">Dark</button>
+    </div>
     <div class="language-switcher" aria-label="Language switcher">
       <button type="button" class="lang-button is-active" data-lang-switch="en" aria-pressed="true">EN</button>
       <button type="button" class="lang-button" data-lang-switch="zh" aria-pressed="false">中文</button>
@@ -44,10 +58,9 @@
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#education" data-i18n="nav.education">Education</a>
           <a href="#research" data-i18n="nav.research">Research</a>
+          <a href="#news" data-i18n="nav.news">News</a>
           <a href="#publications" data-i18n="nav.publications">Publications</a>
-          <a href="#outputs" data-i18n="nav.outputs">Outputs</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
-          <a href="#patents" data-i18n="nav.patents">Patents</a>
           <a href="#skills" data-i18n="nav.skills">Skills</a>
           <a href="#awards" data-i18n="nav.awards">Awards</a>
           <a href="#activities" data-i18n="nav.activities">Activities</a>
@@ -64,17 +77,23 @@
           <h1 data-i18n-html="name.full">Zhenguo <span>Wang</span></h1>
           <div class="subheading" data-i18n-html="about.affiliation">
             Department of Atmospheric and Oceanic Sciences · Fudan University ·
-            <a href="mailto:zgwang24@m.fudan.edu.cn">zgwang24@m.fudan.edu.cn</a>
+            <button class="text-copy-button" type="button" data-copy-email="zgwang24@m.fudan.edu.cn">zgwang24@m.fudan.edu.cn</button>
           </div>
           <p class="lead" data-i18n-html="about.lead">
-            AI-driven ocean biogeochemical modeling and applications, ocean spatiotemporal data
-            mining, dissolved oxygen and pCO<sub>2</sub> reconstruction, marine carbon cycle,
-            remote sensing, GIS, and gridded data product development.
+            I develop physically interpretable machine-learning frameworks for reconstructing
+            global ocean biogeochemical fields, with a focus on dissolved oxygen, surface-ocean
+            pCO<sub>2</sub>, ocean deoxygenation, and carbon-oxygen coupling under climate change.
           </p>
           <div class="social-row" aria-label="Academic and professional links">
-            <a href="https://scholar.google.com/citations?user=sPnBKkMAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://orcid.org/0009-0009-8663-1279" target="_blank" rel="noopener noreferrer">ORCID</a>
-            <a href="https://www.researchgate.net/profile/Zhenguo-Wang-15?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            <a class="icon-link" href="https://scholar.google.com/citations?user=sPnBKkMAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <img src="assets/icons/google-scholar.png" alt="">
+            </a>
+            <a class="icon-link" href="https://www.researchgate.net/profile/Zhenguo-Wang-15?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate">
+              <img src="assets/icons/researchgate.png" alt="">
+            </a>
+            <a class="icon-link" href="https://www.instagram.com/zhenguowang1202?igsh=aDV4aDRvYnZxNjYy&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="assets/icons/instagram.png" alt="">
+            </a>
           </div>
           <div class="bio-block">
             <p class="visually-hidden" data-i18n-html="about.bio">
@@ -127,14 +146,64 @@
 
       <section id="research" class="resume-section">
         <div class="section-content">
-          <h2 data-i18n="section.research">Research</h2>
-          <ul class="topic-list">
-            <li data-i18n="research.1">AI-driven ocean biogeochemical modeling and applications</li>
-            <li data-i18n-html="research.2">Ocean dissolved oxygen and pCO<sub>2</sub> reconstruction and change assessment</li>
-            <li data-i18n="research.3">Ocean spatiotemporal data mining and gridded data product development</li>
-            <li data-i18n="research.4">OMZ evolution and multi-variable coupling mechanisms, including carbon fluxes</li>
-            <li data-i18n="research.5">Ocean remote sensing, GIS, and environmental monitoring system development</li>
-          </ul>
+          <h2 data-i18n="section.research">Research Themes</h2>
+          <div class="theme-grid">
+            <article class="theme-card">
+              <span class="theme-kicker">01</span>
+              <h3 data-i18n="research.theme1.title">Ocean Oxygen Reconstruction</h3>
+              <p data-i18n="research.theme1.body">GEOXYGEN, Argo dissolved oxygen observations, and long-term reconstruction of global ocean oxygen change.</p>
+            </article>
+            <article class="theme-card">
+              <span class="theme-kicker">02</span>
+              <h3 data-i18n-html="research.theme2.title">Surface-ocean pCO<sub>2</sub> and Carbon Sink</h3>
+              <p data-i18n="research.theme2.body">FDU-BTR / OceanBTR, surface-ocean pCO2 reconstruction, and air-sea CO2 flux assessment.</p>
+            </article>
+            <article class="theme-card">
+              <span class="theme-kicker">03</span>
+              <h3 data-i18n="research.theme3.title">Interpretable AI for Ocean Biogeochemistry</h3>
+              <p data-i18n="research.theme3.body">BTR residual learning, region-aware modeling, uncertainty diagnosis, and physically meaningful machine learning.</p>
+            </article>
+            <article class="theme-card">
+              <span class="theme-kicker">04</span>
+              <h3 data-i18n="research.theme4.title">Carbon-Oxygen Coupling</h3>
+              <p data-i18n="research.theme4.body">Oxygen minimum zones, ocean deoxygenation, carbon sinks, and thermal-carbon-oxygen coupling mechanisms.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="resume-section">
+        <div class="section-content">
+          <h2 data-i18n="section.news">News / Updates</h2>
+          <div class="news-layout">
+            <div class="timeline news-list">
+              <article class="timeline-item">
+                <div class="item-meta">2026</div>
+                <div>
+                  <h3><a href="https://doi.org/10.5194/essd-18-3125-2026" target="_blank" rel="noopener noreferrer" data-i18n="news.1.title">GEOXYGEN paper published in ESSD</a></h3>
+                  <p data-i18n="news.1.body">The GEOXYGEN global long-term dissolved oxygen dataset paper was published in Earth System Science Data.</p>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <div class="item-meta">2025</div>
+                <div>
+                  <h3><a href="https://www.cbas.ac.cn/yjcg/yjbg/" target="_blank" rel="noopener noreferrer" data-i18n="news.2.title">Global-scale sustainable development monitoring report</a></h3>
+                  <p data-i18n="news.2.body">Contributed to the dissolved oxygen analysis section of the Global-Scale Sustainable Development Monitoring Report 2025.</p>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <div class="item-meta">2023</div>
+                <div>
+                  <h3 data-i18n="news.3.title">Conference presentations and peer review</h3>
+                  <p data-i18n="news.3.body">Presented at national conferences related to coastal remote sensing, geographic information science, and ocean data assimilation; served as a reviewer for Earth System Science Data.</p>
+                </div>
+              </article>
+            </div>
+            <figure class="news-figure">
+              <img src="assets/news/geoxygen-global-do.png" alt="GEOXYGEN global dissolved oxygen distribution example">
+              <figcaption data-i18n="news.figure.caption">GEOXYGEN global dissolved oxygen distribution example</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -152,6 +221,7 @@
               <div class="pub-links">
                 <a href="https://doi.org/10.5194/essd-18-3125-2026" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
                 <a href="https://doi.org/10.5281/zenodo.19703198" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
+                <button class="copy-citation" type="button" data-copy-citation="Wang, Z., Fu, W., Xue, C., and Wang, G. (2026). GEOXYGEN: a global long-term dissolved oxygen dataset based on biogeochemistry-aware machine learning framework and multi-source observations. Earth System Science Data, 18, 3125-3146. https://doi.org/10.5194/essd-18-3125-2026">Copy citation</button>
 
               </div>
             </article>
@@ -163,6 +233,7 @@
               </p>
               <div class="pub-links">
                 <a href="https://doi.org/10.3390/rs16020228" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
+                <button class="copy-citation" type="button" data-copy-citation="Wang, Z., Xue, C., and Ping, B. (2024). A reconstructing model based on time-space-depth partitioning for global ocean dissolved oxygen concentration. Remote Sensing, 16, 228. https://doi.org/10.3390/rs16020228">Copy citation</button>
               </div>
             </article>
             <article class="publication">
@@ -174,6 +245,7 @@
               <div class="pub-links">
                 <a href="https://doi.org/10.1002/gdj3.251" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
                 <a href="https://doi.org/10.5281/zenodo.17035373" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
+                <button class="copy-citation" type="button" data-copy-citation="Xue, C., Wang, Z., Yue, L., et al. (2024). A global four-dimensional gridded dataset of ocean dissolved oxygen concentration retrieval from Argo profiles. Geoscience Data Journal, 11(4), 775-789. https://doi.org/10.1002/gdj3.251">Copy citation</button>
               </div>
             </article>
             <article class="publication">
@@ -184,15 +256,32 @@
               </p>
               <div class="pub-links">
                 <a href="https://doi.org/10.12082/dqxxkx.2023.220720" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
+                <button class="copy-citation" type="button" data-copy-citation="Yue, L., Xue, C., Wang, Z., and Niu, C. (2023). An Iterative Space-quality Interpolation Method for Marine Dissolved Oxygen Data Observed by Argo Floats. Journal of Geo-Information Science, 22. https://doi.org/10.12082/dqxxkx.2023.220720">Copy citation</button>
               </div>
+            </article>
+          </div>
+          <div class="publication-list patent-list">
+            <h3 data-i18n="section.patents">Patents</h3>
+            <article class="publication">
+              <p data-i18n="patents.1">
+                Xue, C., <strong>Wang, Z.</strong>, and Yue, L. Method for constructing an ocean
+                dissolved oxygen concentration reconstruction model based on Argo temperature and
+                salinity profiles. CN: 202310062810.9.
+              </p>
+            </article>
+            <article class="publication">
+              <p data-i18n="patents.2">
+                Xue, C., Yue, L., and <strong>Wang, Z.</strong> Method for constructing an
+                Argo-based ocean dissolved oxygen spatial grid model. CN: 202211383915.6.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="outputs" class="resume-section">
+      <section id="outputs" class="resume-section" hidden>
         <div class="section-content">
-          <h2 data-i18n="section.outputs">Outputs</h2>
+          <h2 data-i18n="section.outputs">Selected Outputs / Data Products</h2>
           <div class="card-grid">
             <article class="project-card">
               <h3 data-i18n="projects.geoxygen.title">GEOXYGEN Dissolved Oxygen Concentration Dataset</h3>
@@ -228,7 +317,7 @@
 
       <section id="projects" class="resume-section">
         <div class="section-content">
-          <h2 data-i18n="section.projects">Projects</h2>
+          <h2 data-i18n="section.projects">Research Projects</h2>
           <div class="timeline">
             <article class="timeline-item">
               <div class="item-meta">2022-08 - 2023-12</div>
@@ -253,27 +342,6 @@
                   system development.
                 </p>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="patents" class="resume-section">
-        <div class="section-content">
-          <h2 data-i18n="section.patents">Patents</h2>
-          <div class="publication-list">
-            <article class="publication">
-              <p data-i18n="patents.1">
-                Xue, C., <strong>Wang, Z.</strong>, and Yue, L. Method for constructing an ocean
-                dissolved oxygen concentration reconstruction model based on Argo temperature and
-                salinity profiles. CN: 202310062810.9.
-              </p>
-            </article>
-            <article class="publication">
-              <p data-i18n="patents.2">
-                Xue, C., Yue, L., and <strong>Wang, Z.</strong> Method for constructing an
-                Argo-based ocean dissolved oxygen spatial grid model. CN: 202211383915.6.
-              </p>
             </article>
           </div>
         </div>
@@ -337,36 +405,18 @@
 
       <section id="awards" class="resume-section">
         <div class="section-content">
-          <h2 data-i18n="section.awards">Awards</h2>
-          <div class="award-columns">
-            <div>
-              <h3 data-i18n="awards.academic.title">Academic Honors</h3>
-              <ul class="compact-list">
-                <li data-i18n="awards.academic.1">National Encouragement Scholarship</li>
-                <li data-i18n="awards.academic.2">Surveying and Mapping Department Scholarship</li>
-                <li data-i18n="awards.academic.3">Science and Technology Innovation Scholarship</li>
-                <li data-i18n="awards.academic.4">Arts and Sports Scholarship</li>
-                <li data-i18n="awards.academic.5">Outstanding Student and Outstanding Communist Youth League Member</li>
-                <li data-i18n="awards.academic.6">Second Prize, Qingdao Innovation Surveying Skills Competition</li>
-                <li data-i18n="awards.academic.7">Second Prize, University Surveying Skills Competition</li>
-                <li data-i18n="awards.academic.8">Third Prize, University ACM Programming Contest</li>
-                <li data-i18n="awards.academic.9">Third Prize, University Probability Theory Competition</li>
-                <li data-i18n="awards.academic.10">Outstanding Undergraduate Thesis, university level</li>
-                <li data-i18n="awards.academic.11">Outstanding Presentation, 1st National Coastal Zone Remote Sensing Conference, 2023</li>
-              </ul>
-            </div>
-            <div>
-              <h3 data-i18n="awards.sports.title">Sports and Arts</h3>
-              <ul class="compact-list">
-                <li data-i18n="awards.sports.1">Group First Prize, Campus Dance Competition, China University of Petroleum (East China), 2018</li>
-                <li data-i18n="awards.sports.2">3rd place, 3000 m steeplechase, UPC Sports Meeting, 2019; 11'27''</li>
-                <li data-i18n="awards.sports.3">5th place, 3000 m steeplechase, UPC Sports Meeting, 2020</li>
-                <li data-i18n="awards.sports.4">8th place, 5000 m fitness run, AIRCAS Graduate Competition, 2023; 20'21''</li>
-                <li data-i18n="awards.sports.5">Men's doubles and mixed doubles champion, AIRCAS Graduate Badminton Competition, 2023</li>
-                <li data-i18n="awards.sports.6">Top 16, men's doubles, 7th Fudan Badminton Open, 2025</li>
-                <li data-i18n="awards.sports.7">Men's doubles champion, Fudan Department of Atmospheric and Oceanic Sciences Teacher-Student Badminton Match, 2025</li>
-              </ul>
-            </div>
+          <h2 data-i18n="section.awards">Selected Honors</h2>
+          <div class="selected-honors">
+            <h3 data-i18n="awards.academic.title">Academic and Research Honors</h3>
+            <ul class="compact-list">
+              <li data-i18n="awards.academic.1">National Encouragement Scholarship</li>
+              <li data-i18n="awards.academic.12">Excellent Doctoral Academic Scholarship, Fudan University, 2024-2025</li>
+              <li data-i18n="awards.academic.3">Science and Technology Innovation Scholarship</li>
+              <li data-i18n="awards.academic.6">Second Prize, Qingdao Innovation Surveying Skills Competition</li>
+              <li data-i18n="awards.academic.8">Third Prize, University ACM Programming Contest</li>
+              <li data-i18n="awards.academic.10">Outstanding Undergraduate Thesis, university level</li>
+              <li data-i18n="awards.academic.11">Outstanding Presentation, 1st National Coastal Zone Remote Sensing Conference, 2023</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -410,13 +460,17 @@
 
       <section id="interests" class="resume-section">
         <div class="section-content">
-          <h2 data-i18n="section.interests">Interests</h2>
+          <h2 data-i18n="section.interests">Beyond Research</h2>
           <p data-i18n="interests.body">
-            Outside research, I enjoy badminton, fitness training, swimming, running,
-            roller skating, hiking, skiing, rock climbing, and orienteering.
-            Competitive highlights are listed in the sports and arts subsection of Awards.
+            I enjoy badminton, running, hiking, and fitness training.
           </p>
-          <div class="photo-strip" aria-label="Homepage visual gallery">
+          <ul class="compact-list beyond-highlights">
+            <li data-i18n="awards.sports.2">3rd place, 3000 m steeplechase, UPC Sports Meeting, 2019; 11'27''</li>
+            <li data-i18n="awards.sports.5">Men's doubles and mixed doubles champion, AIRCAS Graduate Badminton Competition, 2023</li>
+            <li data-i18n="awards.sports.6">Top 16, men's doubles, 7th Fudan Badminton Open, 2025</li>
+            <li data-i18n="awards.sports.7">Men's doubles champion, Fudan Department of Atmospheric and Oceanic Sciences Teacher-Student Badminton Match, 2025</li>
+          </ul>
+          <div class="photo-strip compact-gallery" aria-label="Homepage visual gallery">
             <figure>
               <img src="assets/interests/badminton.jpg" alt="Zhenguo Wang playing badminton">
               <figcaption data-i18n="interest.badminton">Badminton</figcaption>
@@ -441,10 +495,14 @@
         <div class="section-content">
           <h2 data-i18n="section.contact">Contact</h2>
           <address>
-            <p><strong data-i18n="contact.email">Email:</strong> <a href="mailto:zgwang24@m.fudan.edu.cn">zgwang24@m.fudan.edu.cn</a></p>
+            <p><strong data-i18n="contact.email">Email:</strong> <button class="text-copy-button" type="button" data-copy-email="zgwang24@m.fudan.edu.cn">zgwang24@m.fudan.edu.cn</button></p>
             <p><strong data-i18n="contact.institution">Institution:</strong> <span data-i18n="contact.institutionValue">Department of Atmospheric and Oceanic Sciences, Fudan University</span></p>
             <p><strong data-i18n="contact.location">Location:</strong> <span data-i18n="contact.locationValue">Shanghai, China</span></p>
           </address>
+          <div class="feedback-box" aria-live="polite">
+            <span data-i18n="feedback.question">Was this homepage useful?</span>
+            <button type="button" class="feedback-button" data-feedback-yes data-i18n="feedback.yes">Yes</button>
+          </div>
         </div>
       </section>
     </main>

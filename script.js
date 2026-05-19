@@ -5,6 +5,7 @@
       "name.full": "Zhenguo <span>Wang</span>",
       "nav.education": "Education",
       "nav.research": "Research",
+      "nav.news": "News",
       "nav.publications": "Publications",
       "nav.outputs": "Outputs",
       "nav.projects": "Projects",
@@ -15,10 +16,10 @@
       "nav.interests": "Interests",
       "nav.contact": "Contact",
       "about.eyebrow": "Doctor of Science",
-      "about.affiliation": "Department of Atmospheric and Oceanic Sciences · Fudan University · <a href=\"mailto:zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</a>",
-      "about.lead": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
+      "about.affiliation": "Department of Atmospheric and Oceanic Sciences · Fudan University · <button class=\"text-copy-button\" type=\"button\" data-copy-email=\"zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</button>",
+      "about.lead": "I develop physically interpretable machine-learning frameworks for reconstructing global ocean biogeochemical fields, with a focus on dissolved oxygen, surface-ocean pCO<sub>2</sub>, ocean deoxygenation, and carbon-oxygen coupling under climate change.",
       "about.bio": "I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research interests include ocean spatiotemporal data modeling, marine biogeochemistry, dissolved oxygen and pCO<sub>2</sub> reconstruction, ocean deoxygenation, and machine learning.",
-      "section.projects": "Projects",
+      "section.projects": "Research Projects",
       "experience.sdg.title": "Core Member, SDG Center Innovation Research Program",
       "experience.sdg.subtitle": "Global Ocean Dissolved Oxygen Product and Deoxygenation Mechanism Analysis",
       "experience.sdg.body": "Built Oracle-based ocean observation databases, developed machine-learning reconstruction models, produced a monthly global gridded dissolved oxygen dataset, and analyzed OMZ evolution and cross-variable relationships.",
@@ -35,14 +36,30 @@
       "education.bs.school": "School of Oceanography and Space Informatics, China University of Petroleum (East China)",
       "education.bs.subtitle": "B.S. in Geographic Information Science",
       "education.bs.body": "GPA：3.57/4\nRanked 3/47 and recommended for graduate admission",
-      "section.research": "Research",
+      "section.research": "Research Themes",
       "research.1": "AI-driven ocean biogeochemical modeling and applications",
       "research.2": "Ocean dissolved oxygen and pCO<sub>2</sub> reconstruction and change assessment",
       "research.3": "Ocean spatiotemporal data mining and gridded data product development",
       "research.4": "OMZ evolution and multi-variable coupling mechanisms, including carbon fluxes",
       "research.5": "Ocean remote sensing, GIS, and environmental monitoring system development",
+      "research.theme1.title": "Ocean Oxygen Reconstruction",
+      "research.theme1.body": "GEOXYGEN, Argo dissolved oxygen observations, and long-term reconstruction of global ocean oxygen change.",
+      "research.theme2.title": "Surface-ocean pCO<sub>2</sub> and Carbon Sink",
+      "research.theme2.body": "FDU-BTR / OceanBTR, surface-ocean pCO2 reconstruction, and air-sea CO2 flux assessment.",
+      "research.theme3.title": "Interpretable AI for Ocean Biogeochemistry",
+      "research.theme3.body": "BTR residual learning, region-aware modeling, uncertainty diagnosis, and physically meaningful machine learning.",
+      "research.theme4.title": "Carbon-Oxygen Coupling",
+      "research.theme4.body": "Oxygen minimum zones, ocean deoxygenation, carbon sinks, and thermal-carbon-oxygen coupling mechanisms.",
+      "section.news": "News / Updates",
+      "news.1.title": "GEOXYGEN paper published in ESSD",
+      "news.1.body": "The GEOXYGEN global long-term dissolved oxygen dataset paper was published in Earth System Science Data.",
+      "news.2.title": "Global-scale sustainable development monitoring report",
+      "news.2.body": "Contributed to the dissolved oxygen analysis section of the Global-Scale Sustainable Development Monitoring Report 2025.",
+      "news.3.title": "Conference presentations and peer review",
+      "news.3.body": "Presented at national conferences related to coastal remote sensing, geographic information science, and ocean data assimilation; served as a reviewer for Earth System Science Data.",
+      "news.figure.caption": "GEOXYGEN global dissolved oxygen distribution example",
       "section.publications": "Publications",
-      "section.outputs": "Outputs",
+      "section.outputs": "Selected Outputs / Data Products",
       "projects.geoxygen.title": "GEOXYGEN Dissolved Oxygen Concentration Dataset",
       "projects.geoxygen.body": "Developed and released the GEOXYGEN global long-term dissolved oxygen dataset.",
       "projects.geoxygen.stack": "Topics: dissolved oxygen, gridded ocean data, biogeochemistry-aware machine learning",
@@ -71,8 +88,8 @@
       "skills.gis.body": "ArcGIS, QGIS, ENVI, GIS spatial analysis, and remote sensing image processing.",
       "skills.cert.title": "Certificates",
       "skills.cert.body": "CET-6; National Computer Rank Examination Level 2.",
-      "section.awards": "Awards",
-      "awards.academic.title": "Academic Honors",
+      "section.awards": "Selected Honors",
+      "awards.academic.title": "Academic and Research Honors",
       "awards.sports.title": "Sports and Arts",
       "awards.academic.1": "National Encouragement Scholarship",
       "awards.academic.2": "Surveying and Mapping Department Scholarship",
@@ -85,6 +102,7 @@
       "awards.academic.9": "Third Prize, University Probability Theory Competition",
       "awards.academic.10": "Outstanding Undergraduate Thesis, university level",
       "awards.academic.11": "Outstanding Presentation, 1st National Coastal Zone Remote Sensing Conference, 2023",
+      "awards.academic.12": "Excellent Doctoral Academic Scholarship, Fudan University, 2024-2025",
       "awards.sports.1": "Group First Prize, Campus Dance Competition, China University of Petroleum (East China), 2018",
       "awards.sports.2": "3rd place, 3000 m steeplechase, UPC Sports Meeting, 2019; 11'27''",
       "awards.sports.3": "5th place, 3000 m steeplechase, UPC Sports Meeting, 2020",
@@ -102,8 +120,8 @@
       "activities.student.meta": "Student Work",
       "activities.student.title": "Student Leadership",
       "activities.student.body": "Deputy Minister of the Practice Department, Student Union of the College of Earth Science and Technology, 2018-2019;\nVice President of the 3S Association, University Science and Technology Innovation Union, 2018-2019;\nCaptain of the Ocean College Long-distance Running Team, 2019-2021.",
-      "section.interests": "Interests",
-      "interests.body": "Outside research, I enjoy badminton, fitness training, swimming, running, roller skating, hiking, skiing, rock climbing, and orienteering.",
+      "section.interests": "Beyond Research",
+      "interests.body": "I enjoy badminton, running, hiking, and fitness training.",
       "interest.badminton": "Badminton",
       "interest.fitness": "Fitness",
       "interest.running": "Running",
@@ -113,13 +131,17 @@
       "contact.institution": "Institution:",
       "contact.institutionValue": "Department of Atmospheric and Oceanic Sciences, Fudan University",
       "contact.location": "Location:",
-      "contact.locationValue": "Shanghai, China"
+      "contact.locationValue": "Shanghai, China",
+      "feedback.question": "Was this homepage useful?",
+      "feedback.yes": "Yes",
+      "feedback.thanks": "Thanks for the feedback."
     },
     zh: {
       "nav.about": "简介",
       "name.full": "王振国",
       "nav.education": "教育",
       "nav.research": "研究方向",
+      "nav.news": "动态",
       "nav.publications": "论文",
       "nav.outputs": "成果产出",
       "nav.projects": "项目经历",
@@ -130,10 +152,10 @@
       "nav.interests": "兴趣",
       "nav.contact": "联系",
       "about.eyebrow": "理学博士",
-      "about.affiliation": "复旦大学大气与海洋科学系 · <a href=\"mailto:zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</a>",
-      "about.lead": "我目前是复旦大学大气科学博士研究生，研究兴趣包括海洋时空数据建模、海洋生物地球化学、溶解氧与 pCO<sub>2</sub> 重建、海洋脱氧和机器学习。",
+      "about.affiliation": "复旦大学大气与海洋科学系 · <button class=\"text-copy-button\" type=\"button\" data-copy-email=\"zgwang24@m.fudan.edu.cn\">zgwang24@m.fudan.edu.cn</button>",
+      "about.lead": "我的研究聚焦于面向海洋生物地球化学变量重构的物理可解释机器学习方法，重点关注全球海洋溶解氧、海表 pCO<sub>2</sub>、海洋脱氧及碳-氧耦合变化。",
       "about.bio": "我目前是复旦大学大气科学博士研究生，研究兴趣包括海洋时空数据建模、海洋生物地球化学、溶解氧与 pCO<sub>2</sub> 重建、海洋脱氧和机器学习。",
-      "section.projects": "项目经历",
+      "section.projects": "科研项目",
       "experience.sdg.title": "SDG 中心创新研究计划 --核心成员",
       "experience.sdg.subtitle": "全球海洋溶解氧产品与脱氧机制分析",
       "experience.sdg.body": "构建 Oracle 海洋观测数据库，发展机器学习重建模型，研制全球月尺度网格化溶解氧数据集，并分析氧最小带演变及跨变量关系。",
@@ -150,14 +172,30 @@
       "education.bs.school": "中国石油大学（华东）海洋与空间信息学院",
       "education.bs.subtitle": "本科-地理信息科学",
       "education.bs.body": "GPA：3.57/4\n专业排名 3/47，获得推荐免试研究生资格",
-      "section.research": "研究方向",
+      "section.research": "研究主题",
       "research.1": "人工智能驱动的海洋生物地球化学建模与应用",
       "research.2": "海洋溶解氧与 pCO<sub>2</sub> 重建及变化评估",
       "research.3": "海洋时空数据挖掘与网格化数据产品研发",
       "research.4": "氧最小带演变及碳通量等多变量耦合机制分析",
       "research.5": "海洋遥感、GIS 与环境监测系统开发",
+      "research.theme1.title": "海洋溶解氧重构",
+      "research.theme1.body": "围绕 GEOXYGEN、Argo 溶解氧观测和全球海洋溶解氧长期变化开展数据重构与评估。",
+      "research.theme2.title": "海表 pCO<sub>2</sub> 与海洋碳汇",
+      "research.theme2.body": "关注 FDU-BTR / OceanBTR、海表 pCO2 重构及海-气 CO2 通量评估。",
+      "research.theme3.title": "面向海洋生物地球化学的可解释 AI",
+      "research.theme3.body": "发展 BTR 残差学习、区域感知建模、不确定性诊断和具有物理意义的机器学习方法。",
+      "research.theme4.title": "碳-氧耦合变化",
+      "research.theme4.body": "研究氧最小带、海洋脱氧、海洋碳汇以及热-碳-氧耦合机制。",
+      "section.news": "最新动态",
+      "news.1.title": "GEOXYGEN 论文发表于 ESSD",
+      "news.1.body": "GEOXYGEN 全球长时间序列溶解氧数据集论文发表于 Earth System Science Data。",
+      "news.2.title": "全球尺度可持续发展监测报告",
+      "news.2.body": "参与《全球尺度可持续发展监测报告 2025》中溶解氧相关分析章节的撰写。",
+      "news.3.title": "会议报告与同行评审",
+      "news.3.body": "曾在海岸带遥感、地理信息科学和海洋资料同化相关全国会议作报告，并为 Earth System Science Data 审稿。",
+      "news.figure.caption": "GEOXYGEN 全球溶解氧分布示例",
       "section.publications": "论文发表",
-      "section.outputs": "成果产出",
+      "section.outputs": "代表性成果 / 数据产品",
       "projects.geoxygen.title": "GEOXYGEN 溶解氧浓度数据集",
       "projects.geoxygen.body": "研制并发布 GEOXYGEN 全球长时间序列溶解氧浓度数据集。",
       "projects.geoxygen.stack": "主题：溶解氧、海洋网格化数据、生物地球化学感知机器学习",
@@ -186,8 +224,8 @@
       "skills.gis.body": "ArcGIS、QGIS、ENVI、GIS 空间分析与遥感影像处理。",
       "skills.cert.title": "证书",
       "skills.cert.body": "大学英语六级；全国计算机等级考试二级。",
-      "section.awards": "奖项荣誉",
-      "awards.academic.title": "学术荣誉",
+      "section.awards": "代表性荣誉",
+      "awards.academic.title": "学术与科研荣誉",
       "awards.sports.title": "文体比赛",
       "awards.academic.1": "国家励志奖学金",
       "awards.academic.2": "测绘系奖学金",
@@ -200,6 +238,7 @@
       "awards.academic.9": "校概率论竞赛三等奖",
       "awards.academic.10": "校级优秀本科毕业论文",
       "awards.academic.11": "2023 年第一届全国海岸带遥感大会优秀报告",
+      "awards.academic.12": "复旦大学 2024 至 2025 学年博士生学业奖学金 优秀",
       "awards.sports.1": "2018 年中国石油大学（华东）校园舞蹈大赛团体一等奖（民族舞）",
       "awards.sports.2": "2019 年中国石油大学（华东）运动会 3000 米障碍赛第 3 名，成绩 11'27''",
       "awards.sports.3": "2020 年中国石油大学（华东）运动会 3000 米障碍赛第 5 名",
@@ -217,8 +256,8 @@
       "activities.student.meta": "学生工作",
       "activities.student.title": "学生干部经历",
       "activities.student.body": "2018-2019 年任校地学院学生会实践部副部长\n2018-2019 年任校科创联 3S 协会副会长\n2019-2021 年任海洋学院长跑队队长",
-      "section.interests": "兴趣爱好",
-      "interests.body": "科研之外，我喜欢羽毛球、健身、游泳、跑步、轮滑、爬山、滑雪、攀岩和定向越野。",
+      "section.interests": "科研之外",
+      "interests.body": "科研之外，我喜欢羽毛球、跑步、爬山和健身训练。",
       "interest.badminton": "羽毛球",
       "interest.fitness": "健身",
       "interest.running": "跑步",
@@ -228,7 +267,10 @@
       "contact.institution": "单位：",
       "contact.institutionValue": "复旦大学大气与海洋科学系",
       "contact.location": "地点：",
-      "contact.locationValue": "中国上海"
+      "contact.locationValue": "中国上海",
+      "feedback.question": "这个主页有帮助吗？",
+      "feedback.yes": "有",
+      "feedback.thanks": "感谢反馈。"
     }
   };
 
@@ -236,7 +278,7 @@
   const nav = document.querySelector("#site-nav");
   const backToTop = document.querySelector(".back-to-top");
   const year = document.querySelector("#year");
-  const sections = Array.from(document.querySelectorAll(".resume-section"));
+  const sections = Array.from(document.querySelectorAll(".resume-section:not([hidden])"));
   const navLinks = Array.from(document.querySelectorAll(".site-nav a[href^='#']"));
   const skillbars = Array.from(document.querySelectorAll(".skillbar"));
   const langButtons = Array.from(document.querySelectorAll("[data-lang-switch]"));
@@ -390,6 +432,118 @@
 })();
 
 (function () {
+  const darkToggle = document.querySelector("[data-dark-toggle]");
+  const usefulToggle = document.querySelector("[data-useful-toggle]");
+  const usefulPanel = document.querySelector("#useful-panel");
+
+  function setDarkMode(enabled) {
+    document.body.classList.toggle("dark-mode", enabled);
+    if (darkToggle) {
+      darkToggle.setAttribute("aria-pressed", String(enabled));
+      darkToggle.textContent = enabled ? "Light" : "Dark";
+    }
+    try {
+      localStorage.setItem("homepage-dark-mode", enabled ? "1" : "0");
+    } catch (error) {
+      // Ignore storage failures.
+    }
+  }
+
+  try {
+    setDarkMode(localStorage.getItem("homepage-dark-mode") === "1");
+  } catch (error) {
+    setDarkMode(false);
+  }
+
+  if (darkToggle) {
+    darkToggle.addEventListener("click", function () {
+      setDarkMode(!document.body.classList.contains("dark-mode"));
+    });
+  }
+
+  if (usefulToggle && usefulPanel) {
+    usefulToggle.addEventListener("click", function () {
+      const isOpen = usefulPanel.hidden;
+      usefulPanel.hidden = !isOpen;
+      usefulToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (usefulPanel.hidden) return;
+      if (event.target.closest(".quick-actions")) return;
+      usefulPanel.hidden = true;
+      usefulToggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  document.addEventListener("click", async function (event) {
+    const emailButton = event.target.closest("[data-copy-email]");
+    if (!emailButton) return;
+
+    const email = emailButton.getAttribute("data-copy-email") || "";
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (error) {
+      const helper = document.createElement("textarea");
+      helper.value = email;
+      helper.setAttribute("readonly", "");
+      helper.style.position = "fixed";
+      helper.style.opacity = "0";
+      document.body.appendChild(helper);
+      helper.select();
+      document.execCommand("copy");
+      document.body.removeChild(helper);
+    }
+
+    const original = emailButton.textContent;
+    emailButton.textContent = "Copied";
+    setTimeout(function () {
+      emailButton.textContent = original;
+    }, 1400);
+  });
+
+  document.querySelectorAll("[data-feedback-yes]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const dictionary = translations[document.documentElement.lang === "zh-CN" ? "zh" : "en"] || translations.en;
+      const box = button.closest(".feedback-box");
+      if (box) {
+        box.textContent = dictionary["feedback.thanks"] || "Thanks for the feedback.";
+      }
+      try {
+        localStorage.setItem("homepage-feedback", "yes");
+      } catch (error) {
+        // Ignore storage failures.
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-copy-citation]").forEach(function (button) {
+    button.addEventListener("click", async function () {
+      const citation = button.getAttribute("data-copy-citation") || "";
+      try {
+        await navigator.clipboard.writeText(citation);
+        button.textContent = "Copied";
+      } catch (error) {
+        const helper = document.createElement("textarea");
+        helper.value = citation;
+        helper.setAttribute("readonly", "");
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand("copy");
+        document.body.removeChild(helper);
+        button.textContent = "Copied";
+      }
+
+      setTimeout(function () {
+        button.textContent = "Copy citation";
+      }, 1600);
+    });
+  });
+})();
+
+(function () {
   const progress = document.querySelector(".scroll-progress span");
   const canvas = document.querySelector(".ambient-particles");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -463,7 +617,7 @@
 })();
 
 (function () {
-  const sections = Array.from(document.querySelectorAll(".resume-section[id]"));
+  const sections = Array.from(document.querySelectorAll(".resume-section[id]:not([hidden])"));
 
   if (!sections.length) return;
 
