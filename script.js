@@ -138,7 +138,7 @@
       "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
       "feedback.question": "Was this homepage useful?",
       "feedback.yes": "Yes",
-      "feedback.thanks": "Thanks for the feedback."
+      "feedback.thanks": "Good luck!"
     },
     zh: {
       "nav.about": "简介",
