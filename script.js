@@ -532,7 +532,7 @@
 
   document.querySelectorAll("[data-feedback-yes]").forEach(function (button) {
     button.addEventListener("click", function () {
-      showToast(currentLang() === "zh" ? "感谢反馈" : "Thanks for the feedback.");
+      showToast(currentLang() === "zh" ? "感谢反馈" : "Good Luck!");
       try {
         localStorage.setItem("homepage-feedback", "yes");
       } catch (error) {
