@@ -1205,14 +1205,23 @@ body.dark-mode .ambient-particles {
   }
 
   .quick-actions {
-    top: 0.8rem;
-    right: 4.9rem;
-    gap: 0.35rem;
+    top: 4.75rem;
+    right: 0.85rem;
+    z-index: 18;
+    gap: 0.3rem;
   }
 
   .tool-button {
-    min-height: 2.55rem;
-    padding: 0.35rem 0.65rem;
+    min-height: 2.15rem;
+    padding: 0.25rem 0.58rem;
+    font-size: 0.76rem;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: 0 0.35rem 1rem rgba(33, 37, 41, 0.08);
+  }
+
+  .useful-panel {
+    top: 2.45rem;
+    width: min(13rem, calc(100vw - 1.7rem));
   }
 
   .resume-section {
