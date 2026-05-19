@@ -314,8 +314,8 @@ a[aria-disabled="true"] {
 
 .copy-toast {
   position: fixed;
-  right: 1.2rem;
-  bottom: 1.2rem;
+  top: 1.1rem;
+  left: 50%;
   z-index: 95;
   max-width: min(22rem, calc(100vw - 2rem));
   padding: 0.72rem 0.95rem;
@@ -328,13 +328,13 @@ a[aria-disabled="true"] {
   box-shadow: 0 1rem 2.2rem rgba(33, 37, 41, 0.14);
   backdrop-filter: blur(12px);
   opacity: 0;
-  transform: translateY(0.55rem);
+  transform: translate(-50%, -0.55rem);
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .copy-toast.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 main,
@@ -702,14 +702,6 @@ p {
   font-weight: 700;
 }
 
-.figure-download {
-  display: inline-flex;
-  margin-top: 0.55rem;
-  color: var(--accent);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
 .publication-list {
   display: grid;
   gap: 1.4rem;
@@ -984,8 +976,8 @@ address {
 }
 
 .contact-motto {
-  max-width: 44rem;
-  margin: 0;
+  max-width: 46rem;
+  margin: 2.4rem 0 0;
   color: #465560;
   font-size: 1.02rem;
   font-weight: 600;
@@ -1052,34 +1044,6 @@ address {
 .contact-email-button:focus::after {
   opacity: 0.8;
   transform: scaleX(1);
-}
-
-.footer-metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1.2rem;
-}
-
-.footer-metrics div {
-  min-width: 8.2rem;
-  padding: 0.8rem 0.95rem;
-  border: 1px solid rgba(47, 111, 143, 0.14);
-  background: rgba(255, 255, 255, 0.66);
-}
-
-.footer-metrics strong {
-  display: block;
-  color: #243642;
-  font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 2.2rem;
-  line-height: 0.95;
-}
-
-.footer-metrics span {
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 700;
 }
 
 @keyframes compass-rotate {
@@ -1487,7 +1451,6 @@ body.dark-mode .selected-honors,
 body.dark-mode .photo-strip figure,
 body.dark-mode .news-figure,
 body.dark-mode .contact-card,
-body.dark-mode .footer-metrics div,
 body.dark-mode .useful-panel,
 body.dark-mode .lightbox-panel {
   background: rgba(17, 31, 42, 0.88);
@@ -1521,13 +1484,8 @@ body.dark-mode .lightbox-panel figcaption {
   color: #c8d8e2;
 }
 
-body.dark-mode .contact-motto,
-body.dark-mode .footer-metrics span {
+body.dark-mode .contact-motto {
   color: #c8d8e2;
-}
-
-body.dark-mode .footer-metrics strong {
-  color: #edf4f8;
 }
 
 body.dark-mode .ocean-compass {
@@ -1715,20 +1673,6 @@ body.dark-mode .ambient-particles {
     padding: 0.95rem 1rem;
   }
 
-  .footer-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.55rem;
-  }
-
-  .footer-metrics div {
-    min-width: 0;
-    padding: 0.7rem 0.65rem;
-  }
-
-  .footer-metrics strong {
-    font-size: 1.85rem;
-  }
 
   .keyword-cloud {
     gap: 0.35rem;

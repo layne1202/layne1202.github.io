@@ -57,7 +57,7 @@
       "news.2.body": "Contributed to the dissolved oxygen analysis section of the Global-Scale Sustainable Development Monitoring Report 2025.",
       "news.3.title": "Conference presentations and peer review",
       "news.3.body": "Presented at national conferences related to coastal remote sensing, geographic information science, and ocean data assimilation; served as a reviewer for Earth System Science Data.",
-      "news.figure.caption": "Figure: Global average dissolved oxygen concentration in the ocean at depths of 0-800m (January 2020)",
+      "news.figure.caption": "Global average dissolved oxygen concentration in the ocean at depths of 0-800m (January 2020)",
       "section.publications": "Publications",
       "section.outputs": "Selected Outputs / Data Products",
       "projects.geoxygen.title": "GEOXYGEN Dissolved Oxygen Concentration Dataset",
@@ -75,7 +75,6 @@
       "link.downloadReport": "Download report",
       "link.news": "Related post",
       "link.copy": "Copy",
-      "link.downloadFigure": "Download figure",
       "lightbox.close": "Close",
       "lightbox.download": "Download",
       "section.patents": "Patents",
@@ -137,9 +136,6 @@
       "contact.location": "Location:",
       "contact.locationValue": "Shanghai, China",
       "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
-      "metrics.publications": "Publications",
-      "metrics.patents": "Patents",
-      "metrics.datasets": "Datasets",
       "feedback.question": "Was this homepage useful?",
       "feedback.yes": "Yes",
       "feedback.thanks": "Thanks for the feedback."
@@ -219,7 +215,6 @@
       "link.downloadReport": "下载报告",
       "link.news": "公众号推送",
       "link.copy": "复制",
-      "link.downloadFigure": "下载图片",
       "lightbox.close": "关闭",
       "lightbox.download": "下载",
       "section.patents": "专利",
@@ -281,9 +276,6 @@
       "contact.location": "地点：",
       "contact.locationValue": "中国上海",
       "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
-      "metrics.publications": "论文",
-      "metrics.patents": "专利",
-      "metrics.datasets": "数据集",
       "feedback.question": "这个主页有帮助吗？",
       "feedback.yes": "有",
       "feedback.thanks": "感谢反馈。"
@@ -298,6 +290,7 @@
   const navLinks = Array.from(document.querySelectorAll(".site-nav a[href^='#']"));
   const skillbars = Array.from(document.querySelectorAll(".skillbar"));
   const langButtons = Array.from(document.querySelectorAll("[data-lang-switch]"));
+  window.homepageTranslations = translations;
 
   function applyLanguage(lang) {
     const dictionary = translations[lang] || translations.en;
@@ -544,7 +537,8 @@
 
   document.querySelectorAll("[data-feedback-yes]").forEach(function (button) {
     button.addEventListener("click", function () {
-      const dictionary = translations[document.documentElement.lang === "zh-CN" ? "zh" : "en"] || translations.en;
+      const dictionaries = window.homepageTranslations || {};
+      const dictionary = dictionaries[document.documentElement.lang === "zh-CN" ? "zh" : "en"] || dictionaries.en || {};
       const box = button.closest(".feedback-box");
       if (box) {
         box.textContent = dictionary["feedback.thanks"] || "Thanks for the feedback.";
@@ -560,12 +554,18 @@
   document.querySelectorAll("[data-copy-citation]").forEach(function (button) {
     button.addEventListener("click", async function () {
       const citation = button.getAttribute("data-copy-citation") || "";
+      const originalText = currentLang() === "zh" ? "复制" : "Copy";
+      button.textContent = currentLang() === "zh" ? "已复制" : "Copied";
       try {
         await copyText(citation);
-        showToast(currentLang() === "zh" ? "引用已复制" : "Citation copied");
       } catch (error) {
+        button.textContent = originalText;
         showToast(currentLang() === "zh" ? "复制失败，请手动复制" : "Copy failed; please copy manually");
+        return;
       }
+      window.setTimeout(function () {
+        button.textContent = originalText;
+      }, 1000);
     });
   });
 })();
