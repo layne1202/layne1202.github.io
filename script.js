@@ -460,10 +460,7 @@
   document.querySelectorAll(".tilt-card").forEach(function (card) {
     card.addEventListener("pointermove", function (event) {
       if (reduceMotion) return;
-      const rect = card.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 4;
-      const y = ((event.clientY - rect.top) / rect.height - 0.5) * -4;
-      card.style.transform = "translateY(-4px) rotateX(" + y.toFixed(2) + "deg) rotateY(" + x.toFixed(2) + "deg)";
+      card.style.transform = "translateY(-2px)";
     });
 
     card.addEventListener("pointerleave", function () {
