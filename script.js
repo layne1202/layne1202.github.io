@@ -599,7 +599,7 @@
       image.src = source;
       image.alt = label || "Image preview";
     }
-    if (caption) caption.textContent = label;
+    if (caption) caption.textContent = trigger.classList.contains("figure-preview") ? "" : label;
     if (download) download.href = downloadSource;
   }
 
@@ -643,6 +643,65 @@
     if (event.key === "ArrowLeft") render(activeIndex - 1);
     if (event.key === "ArrowRight") render(activeIndex + 1);
   });
+})();
+
+(function () {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  const glow = document.querySelector(".cursor-glow");
+  const hero = document.querySelector(".hero-section");
+
+  if (!finePointer || reduceMotion) {
+    if (glow) glow.hidden = true;
+    return;
+  }
+
+  let targetX = window.innerWidth / 2;
+  let targetY = window.innerHeight / 2;
+  let currentX = targetX;
+  let currentY = targetY;
+  let active = false;
+  let magnet = false;
+
+  function setMagnet(event) {
+    magnet = Boolean(event.target.closest("a, button, .publication, .news-figure, .photo-strip figure"));
+  }
+
+  window.addEventListener("pointermove", function (event) {
+    active = true;
+    targetX = event.clientX;
+    targetY = event.clientY;
+    setMagnet(event);
+
+    if (hero) {
+      const offsetX = ((event.clientX / window.innerWidth) - 0.5) * 4;
+      const offsetY = ((event.clientY / window.innerHeight) - 0.5) * 4;
+      hero.style.setProperty("--hero-shift-x", offsetX.toFixed(2) + "px");
+      hero.style.setProperty("--hero-shift-y", offsetY.toFixed(2) + "px");
+    }
+  }, { passive: true });
+
+  window.addEventListener("pointerleave", function () {
+    active = false;
+    magnet = false;
+    if (hero) {
+      hero.style.setProperty("--hero-shift-x", "0px");
+      hero.style.setProperty("--hero-shift-y", "0px");
+    }
+  });
+
+  function animateGlow() {
+    if (glow) {
+      currentX += (targetX - currentX) * 0.18;
+      currentY += (targetY - currentY) * 0.18;
+      glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%) scale(${magnet ? 1.45 : 1})`;
+      glow.classList.toggle("is-active", active);
+      glow.classList.toggle("is-magnetic", magnet);
+    }
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
 })();
 
 (function () {
