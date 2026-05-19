@@ -15,15 +15,15 @@
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://layne1202.github.io/">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M10 38c8-10 14 10 22 0s14-10 22 0' fill='none' stroke='%234cc9f0' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='24' r='7' fill='%23a7f3d0'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Saira+Extra+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260518d">
+    <link rel="stylesheet" href="styles.css?v=20260519a">
   </head>
   <body id="page-top">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <canvas class="ambient-particles" aria-hidden="true"></canvas>
     <div class="language-switcher" aria-label="Language switcher">
       <button type="button" class="lang-button is-active" data-lang-switch="en" aria-pressed="true">EN</button>
       <button type="button" class="lang-button" data-lang-switch="zh" aria-pressed="false">中文</button>
@@ -59,12 +59,9 @@
 
     <main id="main">
       <section id="about" class="resume-section hero-section">
-        <canvas class="ocean-canvas" aria-hidden="true"></canvas>
-        <div class="ocean-grid" aria-hidden="true"></div>
-        <div class="section-content hero-content">
+        <div class="section-content">
           <p class="eyebrow" data-i18n="about.eyebrow">Ph.D. Student in Atmospheric Sciences</p>
           <h1 data-i18n-html="name.full">Zhenguo <span>Wang</span></h1>
-          <p class="hero-title" data-i18n="about.title">AI-driven Ocean Biogeochemical Modeling</p>
           <div class="subheading" data-i18n-html="about.affiliation">
             Department of Atmospheric and Oceanic Sciences · Fudan University ·
             <a href="mailto:zgwang24@m.fudan.edu.cn">zgwang24@m.fudan.edu.cn</a>
@@ -79,43 +76,6 @@
             <a href="https://orcid.org/0009-0009-8663-1279" target="_blank" rel="noopener noreferrer">ORCID</a>
             <a href="https://www.researchgate.net/profile/Zhenguo-Wang-15?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate</a>
           </div>
-          <div class="keyword-row" aria-label="Research keywords">
-            <span>Ocean DO</span>
-            <span>pCO<sub>2</sub></span>
-            <span>OMZ</span>
-            <span>Remote Sensing</span>
-            <span>Gridded Data Products</span>
-          </div>
-          <div class="social-row hero-actions" aria-label="Homepage shortcuts">
-            <a href="#publications" data-i18n="hero.publications">Publications</a>
-            <a href="#outputs" data-i18n="hero.datasets">Datasets</a>
-            <a href="#contact" data-i18n="hero.contact">Contact</a>
-          </div>
-          <aside class="hero-panel" aria-label="Research highlights">
-            <p class="panel-kicker" data-i18n="hero.panelKicker">Selected Signals</p>
-            <div class="signal-card signal-primary">
-              <span data-i18n="hero.signal1.meta">Dataset</span>
-              <strong>GEOXYGEN</strong>
-              <small data-i18n="hero.signal1.body">Global long-term dissolved oxygen product</small>
-            </div>
-            <div class="hero-metrics">
-              <div>
-                <strong>4</strong>
-                <span data-i18n="hero.metricPublications">Publications</span>
-              </div>
-              <div>
-                <strong>2</strong>
-                <span data-i18n="hero.metricPatents">Patents</span>
-              </div>
-              <div>
-                <strong>2026</strong>
-                <span>ESSD</span>
-              </div>
-            </div>
-            <div class="data-slice" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-          </aside>
           <div class="bio-block">
             <p class="visually-hidden" data-i18n-html="about.bio">
               I am a Ph.D. student in Atmospheric Sciences at Fudan University. My research
@@ -168,23 +128,13 @@
       <section id="research" class="resume-section">
         <div class="section-content">
           <h2 data-i18n="section.research">Research</h2>
-          <div class="research-grid">
-            <article class="research-card tilt-card">
-              <span class="card-icon">O2</span>
-              <h3 data-i18n="research.card1.title">Ocean Oxygen Reconstruction</h3>
-              <p data-i18n="research.card1.body">Machine learning reconstruction of global dissolved oxygen fields from Argo and multi-source observations.</p>
-            </article>
-            <article class="research-card tilt-card">
-              <span class="card-icon">CO2</span>
-              <h3 data-i18n-html="research.card2.title">Marine Carbon &amp; pCO<sub>2</sub> Dynamics</h3>
-              <p data-i18n="research.card2.body">Spatiotemporal modeling of carbon-cycle variables, deoxygenation, and coupled ocean biogeochemical change.</p>
-            </article>
-            <article class="research-card tilt-card">
-              <span class="card-icon">AI</span>
-              <h3 data-i18n="research.card3.title">AI for Ocean Data Products</h3>
-              <p data-i18n="research.card3.body">Biogeochemistry-aware machine learning, gridded products, remote sensing, GIS, and ocean monitoring systems.</p>
-            </article>
-          </div>
+          <ul class="topic-list">
+            <li data-i18n="research.1">AI-driven ocean biogeochemical modeling and applications</li>
+            <li data-i18n-html="research.2">Ocean dissolved oxygen and pCO<sub>2</sub> reconstruction and change assessment</li>
+            <li data-i18n="research.3">Ocean spatiotemporal data mining and gridded data product development</li>
+            <li data-i18n="research.4">OMZ evolution and multi-variable coupling mechanisms, including carbon fluxes</li>
+            <li data-i18n="research.5">Ocean remote sensing, GIS, and environmental monitoring system development</li>
+          </ul>
         </div>
       </section>
 
@@ -192,7 +142,7 @@
         <div class="section-content">
           <h2 data-i18n="section.publications">Publications</h2>
           <div class="publication-list">
-            <article class="publication tilt-card">
+            <article class="publication">
               <p>
                 <strong>Wang, Z.</strong>, Fu, W., Xue, C., and Wang, G. (2026).
                 GEOXYGEN: a global long-term dissolved oxygen dataset based on
@@ -205,7 +155,7 @@
 
               </div>
             </article>
-            <article class="publication tilt-card">
+            <article class="publication">
               <p>
                 <strong>Wang, Z.</strong>, Xue, C., and Ping, B. (2024).
                 A reconstructing model based on time-space-depth partitioning for global ocean
@@ -215,7 +165,7 @@
                 <a href="https://doi.org/10.3390/rs16020228" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
               </div>
             </article>
-            <article class="publication tilt-card">
+            <article class="publication">
               <p>
                 Xue, C., <strong>Wang, Z.</strong>, Yue, L., et al. (2024).
                 A global four-dimensional gridded dataset of ocean dissolved oxygen concentration
@@ -226,7 +176,7 @@
                 <a href="https://doi.org/10.5281/zenodo.17035373" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
               </div>
             </article>
-            <article class="publication tilt-card">
+            <article class="publication">
               <p>
                 Yue, L., Xue, C., <strong>Wang, Z.</strong>, and Niu, C. (2023).
                 An Iterative Space-quality Interpolation Method for Marine Dissolved Oxygen Data
@@ -244,7 +194,7 @@
         <div class="section-content">
           <h2 data-i18n="section.outputs">Outputs</h2>
           <div class="card-grid">
-            <article class="project-card output-card output-geoxygen tilt-card">
+            <article class="project-card">
               <h3 data-i18n="projects.geoxygen.title">GEOXYGEN Dissolved Oxygen Concentration Dataset</h3>
               <p data-i18n="projects.geoxygen.body">
                 Developed and released the GEOXYGEN global long-term dissolved oxygen dataset.
@@ -253,7 +203,7 @@
               <a href="https://doi.org/10.5281/zenodo.19703198" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
               <a href="https://mp.weixin.qq.com/s/laaWFZJXKVm8eJeiq3AJsQ?scene=1&amp;click_id=18" target="_blank" rel="noopener noreferrer" data-i18n="link.news">Related post</a>
             </article>
-            <article class="project-card output-card output-report tilt-card">
+            <article class="project-card">
               <h3 data-i18n="projects.report.title">Global-Scale Sustainable Development Monitoring Report 2025</h3>
               <p data-i18n="projects.report.body">
                 Contributed to the writing of the dissolved oxygen analysis section for the
@@ -263,7 +213,7 @@
               <a href="https://www.cbas.ac.cn/yjcg/yjbg/" target="_blank" rel="noopener noreferrer" data-i18n="link.reports">Reports</a>
               <a href="https://www.cbas.ac.cn/yjcg/yjbg/202510/P020251103596207096557.pdf" target="_blank" rel="noopener noreferrer" data-i18n="link.downloadReport">Download report</a>
             </article>
-            <article class="project-card output-card output-monitor tilt-card">
+            <article class="project-card">
               <h3 data-i18n="projects.monitor.title">Global Ocean Anomaly Remote Sensing Monitoring System</h3>
               <p data-i18n="projects.monitor.body">
                 Updated and validated remote-sensing analysis datasets for global ocean surface
@@ -312,14 +262,14 @@
         <div class="section-content">
           <h2 data-i18n="section.patents">Patents</h2>
           <div class="publication-list">
-            <article class="publication tilt-card">
+            <article class="publication">
               <p data-i18n="patents.1">
                 Xue, C., <strong>Wang, Z.</strong>, and Yue, L. Method for constructing an ocean
                 dissolved oxygen concentration reconstruction model based on Argo temperature and
                 salinity profiles. CN: 202310062810.9.
               </p>
             </article>
-            <article class="publication tilt-card">
+            <article class="publication">
               <p data-i18n="patents.2">
                 Xue, C., Yue, L., and <strong>Wang, Z.</strong> Method for constructing an
                 Argo-based ocean dissolved oxygen spatial grid model. CN: 202211383915.6.
@@ -503,7 +453,7 @@
 
     <footer class="site-footer">
       <div class="section-content">
-        <p>&copy; <span id="year">2026</span> Zhenguo Wang. Built as a static academic homepage.</p>
+        <p>© <span id="year">2026</span> Zhenguo Wang. Built as a static academic homepage.</p>
       </div>
     </footer>
 
