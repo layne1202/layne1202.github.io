@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Saira+Extra+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260519f">
+    <link rel="stylesheet" href="styles.css?v=20260519g">
   </head>
   <body id="page-top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -200,8 +200,11 @@
               </article>
             </div>
             <figure class="news-figure">
-              <img src="assets/news/geoxygen-global-do.png" alt="GEOXYGEN global dissolved oxygen distribution example">
-              <figcaption data-i18n="news.figure.caption">GEOXYGEN global dissolved oxygen distribution example</figcaption>
+              <button class="figure-preview" type="button" data-lightbox-item data-full-image="assets/news/geoxygen-global-do.png" data-download="assets/news/geoxygen-global-do.png" data-caption="Figure: Global average dissolved oxygen concentration in the ocean at depths of 0-800m (January 2020)">
+                <img src="assets/news/geoxygen-global-do.png" alt="GEOXYGEN global dissolved oxygen distribution example">
+              </button>
+              <figcaption data-i18n="news.figure.caption">Figure: Global average dissolved oxygen concentration in the ocean at depths of 0-800m (January 2020)</figcaption>
+              <a class="figure-download" href="assets/news/geoxygen-global-do.png" download data-i18n="link.downloadFigure">Download figure</a>
             </figure>
           </div>
         </div>
@@ -221,7 +224,7 @@
               <div class="pub-links">
                 <a href="https://doi.org/10.5194/essd-18-3125-2026" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
                 <a href="https://doi.org/10.5281/zenodo.19703198" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
-                <button class="copy-citation" type="button" data-copy-citation="Wang, Z., Fu, W., Xue, C., and Wang, G. (2026). GEOXYGEN: a global long-term dissolved oxygen dataset based on biogeochemistry-aware machine learning framework and multi-source observations. Earth System Science Data, 18, 3125-3146. https://doi.org/10.5194/essd-18-3125-2026">Copy citation</button>
+                <button class="copy-citation" type="button" data-i18n="link.copy" data-copy-citation="Wang, Z., Fu, W., Xue, C., and Wang, G. (2026). GEOXYGEN: a global long-term dissolved oxygen dataset based on biogeochemistry-aware machine learning framework and multi-source observations. Earth System Science Data, 18, 3125-3146. https://doi.org/10.5194/essd-18-3125-2026">Copy</button>
 
               </div>
             </article>
@@ -233,7 +236,7 @@
               </p>
               <div class="pub-links">
                 <a href="https://doi.org/10.3390/rs16020228" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
-                <button class="copy-citation" type="button" data-copy-citation="Wang, Z., Xue, C., and Ping, B. (2024). A reconstructing model based on time-space-depth partitioning for global ocean dissolved oxygen concentration. Remote Sensing, 16, 228. https://doi.org/10.3390/rs16020228">Copy citation</button>
+                <button class="copy-citation" type="button" data-i18n="link.copy" data-copy-citation="Wang, Z., Xue, C., and Ping, B. (2024). A reconstructing model based on time-space-depth partitioning for global ocean dissolved oxygen concentration. Remote Sensing, 16, 228. https://doi.org/10.3390/rs16020228">Copy</button>
               </div>
             </article>
             <article class="publication">
@@ -245,7 +248,7 @@
               <div class="pub-links">
                 <a href="https://doi.org/10.1002/gdj3.251" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
                 <a href="https://doi.org/10.5281/zenodo.17035373" target="_blank" rel="noopener noreferrer" data-i18n="link.dataset">Dataset</a>
-                <button class="copy-citation" type="button" data-copy-citation="Xue, C., Wang, Z., Yue, L., et al. (2024). A global four-dimensional gridded dataset of ocean dissolved oxygen concentration retrieval from Argo profiles. Geoscience Data Journal, 11(4), 775-789. https://doi.org/10.1002/gdj3.251">Copy citation</button>
+                <button class="copy-citation" type="button" data-i18n="link.copy" data-copy-citation="Xue, C., Wang, Z., Yue, L., et al. (2024). A global four-dimensional gridded dataset of ocean dissolved oxygen concentration retrieval from Argo profiles. Geoscience Data Journal, 11(4), 775-789. https://doi.org/10.1002/gdj3.251">Copy</button>
               </div>
             </article>
             <article class="publication">
@@ -256,7 +259,7 @@
               </p>
               <div class="pub-links">
                 <a href="https://doi.org/10.12082/dqxxkx.2023.220720" target="_blank" rel="noopener noreferrer" data-i18n="link.doi">DOI</a>
-                <button class="copy-citation" type="button" data-copy-citation="Yue, L., Xue, C., Wang, Z., and Niu, C. (2023). An Iterative Space-quality Interpolation Method for Marine Dissolved Oxygen Data Observed by Argo Floats. Journal of Geo-Information Science, 22. https://doi.org/10.12082/dqxxkx.2023.220720">Copy citation</button>
+                <button class="copy-citation" type="button" data-i18n="link.copy" data-copy-citation="Yue, L., Xue, C., Wang, Z., and Niu, C. (2023). An Iterative Space-quality Interpolation Method for Marine Dissolved Oxygen Data Observed by Argo Floats. Journal of Geo-Information Science, 22. https://doi.org/10.12082/dqxxkx.2023.220720">Copy</button>
               </div>
             </article>
           </div>
@@ -472,19 +475,27 @@
           </ul>
           <div class="photo-strip compact-gallery" aria-label="Homepage visual gallery">
             <figure>
-              <img src="assets/interests/badminton.jpg" alt="Zhenguo Wang playing badminton">
+              <button class="gallery-button" type="button" data-lightbox-item data-full-image="assets/interests/badminton.jpg" data-caption="Badminton">
+                <img src="assets/interests/badminton.jpg" alt="Zhenguo Wang playing badminton">
+              </button>
               <figcaption data-i18n="interest.badminton">Badminton</figcaption>
             </figure>
             <figure>
-              <img src="assets/interests/hiking.jpg" alt="Hiking activity">
+              <button class="gallery-button" type="button" data-lightbox-item data-full-image="assets/interests/hiking.jpg" data-caption="Hiking">
+                <img src="assets/interests/hiking.jpg" alt="Hiking activity">
+              </button>
               <figcaption data-i18n="interest.hiking">Hiking</figcaption>
             </figure>
             <figure>
-              <img src="assets/interests/running.jpg" alt="Running activity">
+              <button class="gallery-button" type="button" data-lightbox-item data-full-image="assets/interests/running.jpg" data-caption="Running">
+                <img src="assets/interests/running.jpg" alt="Running activity">
+              </button>
               <figcaption data-i18n="interest.running">Running</figcaption>
             </figure>
             <figure>
-              <img src="assets/interests/fitness.jpg" alt="Fitness training activity">
+              <button class="gallery-button" type="button" data-lightbox-item data-full-image="assets/interests/fitness.jpg" data-caption="Fitness">
+                <img src="assets/interests/fitness.jpg" alt="Fitness training activity">
+              </button>
               <figcaption data-i18n="interest.fitness">Fitness</figcaption>
             </figure>
           </div>
@@ -506,6 +517,22 @@
         </div>
       </section>
     </main>
+
+    <div class="copy-toast" role="status" aria-live="polite" hidden></div>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+      <button class="lightbox-backdrop" type="button" data-lightbox-close aria-label="Close preview"></button>
+      <div class="lightbox-panel">
+        <button class="lightbox-close" type="button" data-lightbox-close data-i18n="lightbox.close">Close</button>
+        <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous image">‹</button>
+        <figure>
+          <img data-lightbox-image src="" alt="">
+          <figcaption id="lightbox-title" data-lightbox-caption></figcaption>
+        </figure>
+        <a class="lightbox-download" href="#" download data-lightbox-download data-i18n="lightbox.download">Download</a>
+        <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next image">›</button>
+      </div>
+    </div>
 
     <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
 

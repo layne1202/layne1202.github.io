@@ -57,7 +57,7 @@
       "news.2.body": "Contributed to the dissolved oxygen analysis section of the Global-Scale Sustainable Development Monitoring Report 2025.",
       "news.3.title": "Conference presentations and peer review",
       "news.3.body": "Presented at national conferences related to coastal remote sensing, geographic information science, and ocean data assimilation; served as a reviewer for Earth System Science Data.",
-      "news.figure.caption": "GEOXYGEN global dissolved oxygen distribution example",
+      "news.figure.caption": "Figure: Global average dissolved oxygen concentration in the ocean at depths of 0-800m (January 2020)",
       "section.publications": "Publications",
       "section.outputs": "Selected Outputs / Data Products",
       "projects.geoxygen.title": "GEOXYGEN Dissolved Oxygen Concentration Dataset",
@@ -74,6 +74,10 @@
       "link.doi": "DOI",
       "link.downloadReport": "Download report",
       "link.news": "Related post",
+      "link.copy": "Copy",
+      "link.downloadFigure": "Download figure",
+      "lightbox.close": "Close",
+      "lightbox.download": "Download",
       "section.patents": "Patents",
       "patents.1": "Xue, C., Wang, Z., and Yue, L. Method for constructing an ocean dissolved oxygen concentration reconstruction model based on Argo temperature and salinity profiles. CN: 202310062810.9.",
       "patents.2": "Xue, C., Yue, L., and Wang, Z. Method for constructing an Argo-based ocean dissolved oxygen spatial grid model. CN: 202211383915.6.",
@@ -193,7 +197,7 @@
       "news.2.body": "参与《全球尺度可持续发展监测报告 2025》中溶解氧相关分析章节的撰写。",
       "news.3.title": "会议报告与同行评审",
       "news.3.body": "曾在海岸带遥感、地理信息科学和海洋资料同化相关全国会议作报告，并为 Earth System Science Data 审稿。",
-      "news.figure.caption": "GEOXYGEN 全球溶解氧分布示例",
+      "news.figure.caption": "图：2020 年 1 月全球海洋 0-800 m 平均溶解氧浓度",
       "section.publications": "论文发表",
       "section.outputs": "代表性成果 / 数据产品",
       "projects.geoxygen.title": "GEOXYGEN 溶解氧浓度数据集",
@@ -210,6 +214,10 @@
       "link.dataset": "数据集",
       "link.downloadReport": "下载报告",
       "link.news": "公众号推送",
+      "link.copy": "复制",
+      "link.downloadFigure": "下载图片",
+      "lightbox.close": "关闭",
+      "lightbox.download": "下载",
       "section.patents": "专利",
       "patents.1": "薛存金、王振国、岳林峰：一种基于 Argo 温盐剖面的海洋溶解氧浓度重构模型构建方法。CN: 202310062810.9。",
       "patents.2": "薛存金、岳林峰、王振国：一种基于 Argo 的海洋溶解氧空间格模型构建方法。CN: 202211383915.6。",
@@ -427,14 +435,51 @@
   } catch (error) {
     storedLanguage = "en";
   }
-  //applyLanguage(storedLanguage);
-  applyLanguage("en");
+  applyLanguage(storedLanguage === "zh" ? "zh" : "en");
 })();
 
 (function () {
   const darkToggle = document.querySelector("[data-dark-toggle]");
   const usefulToggle = document.querySelector("[data-useful-toggle]");
   const usefulPanel = document.querySelector("#useful-panel");
+
+  function currentLang() {
+    return document.documentElement.lang === "zh-CN" ? "zh" : "en";
+  }
+
+  function showToast(message) {
+    const toast = document.querySelector(".copy-toast");
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.hidden = false;
+    toast.classList.add("is-visible");
+
+    window.clearTimeout(showToast.timeout);
+    showToast.timeout = window.setTimeout(function () {
+      toast.classList.remove("is-visible");
+      window.setTimeout(function () {
+        toast.hidden = true;
+      }, 180);
+    }, 1500);
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    const helper = document.createElement("textarea");
+    helper.value = text;
+    helper.setAttribute("readonly", "");
+    helper.style.position = "fixed";
+    helper.style.opacity = "0";
+    document.body.appendChild(helper);
+    helper.select();
+    document.execCommand("copy");
+    document.body.removeChild(helper);
+    return Promise.resolve();
+  }
 
   function setDarkMode(enabled) {
     document.body.classList.toggle("dark-mode", enabled);
@@ -482,24 +527,11 @@
 
     const email = emailButton.getAttribute("data-copy-email") || "";
     try {
-      await navigator.clipboard.writeText(email);
+      await copyText(email);
+      showToast(currentLang() === "zh" ? "邮箱已复制" : "Email copied");
     } catch (error) {
-      const helper = document.createElement("textarea");
-      helper.value = email;
-      helper.setAttribute("readonly", "");
-      helper.style.position = "fixed";
-      helper.style.opacity = "0";
-      document.body.appendChild(helper);
-      helper.select();
-      document.execCommand("copy");
-      document.body.removeChild(helper);
+      showToast(currentLang() === "zh" ? "复制失败，请手动复制" : "Copy failed; please copy manually");
     }
-
-    const original = emailButton.textContent;
-    emailButton.textContent = "Copied";
-    setTimeout(function () {
-      emailButton.textContent = original;
-    }, 1400);
   });
 
   document.querySelectorAll("[data-feedback-yes]").forEach(function (button) {
@@ -521,25 +553,84 @@
     button.addEventListener("click", async function () {
       const citation = button.getAttribute("data-copy-citation") || "";
       try {
-        await navigator.clipboard.writeText(citation);
-        button.textContent = "Copied";
+        await copyText(citation);
+        showToast(currentLang() === "zh" ? "引用已复制" : "Citation copied");
       } catch (error) {
-        const helper = document.createElement("textarea");
-        helper.value = citation;
-        helper.setAttribute("readonly", "");
-        helper.style.position = "fixed";
-        helper.style.opacity = "0";
-        document.body.appendChild(helper);
-        helper.select();
-        document.execCommand("copy");
-        document.body.removeChild(helper);
-        button.textContent = "Copied";
+        showToast(currentLang() === "zh" ? "复制失败，请手动复制" : "Copy failed; please copy manually");
       }
-
-      setTimeout(function () {
-        button.textContent = "Copy citation";
-      }, 1600);
     });
+  });
+})();
+
+(function () {
+  const triggers = Array.from(document.querySelectorAll("[data-lightbox-item]"));
+  const lightbox = document.querySelector(".lightbox");
+  if (!triggers.length || !lightbox) return;
+
+  const image = lightbox.querySelector("[data-lightbox-image]");
+  const caption = lightbox.querySelector("[data-lightbox-caption]");
+  const download = lightbox.querySelector("[data-lightbox-download]");
+  const prev = lightbox.querySelector("[data-lightbox-prev]");
+  const next = lightbox.querySelector("[data-lightbox-next]");
+  let activeIndex = 0;
+
+  function itemCaption(trigger) {
+    const figureCaption = trigger.closest("figure")?.querySelector("figcaption");
+    if (figureCaption) return figureCaption.textContent.trim();
+    return trigger.getAttribute("data-caption") || "";
+  }
+
+  function render(index) {
+    activeIndex = (index + triggers.length) % triggers.length;
+    const trigger = triggers[activeIndex];
+    const source = trigger.getAttribute("data-full-image") || trigger.querySelector("img")?.getAttribute("src") || "";
+    const downloadSource = trigger.getAttribute("data-download") || source;
+    const label = itemCaption(trigger);
+
+    if (image) {
+      image.src = source;
+      image.alt = label || "Image preview";
+    }
+    if (caption) caption.textContent = label;
+    if (download) download.href = downloadSource;
+  }
+
+  function open(index) {
+    render(index);
+    lightbox.hidden = false;
+    document.body.classList.add("is-lightbox-open");
+    lightbox.querySelector("[data-lightbox-close]")?.focus();
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    document.body.classList.remove("is-lightbox-open");
+    triggers[activeIndex]?.focus?.();
+  }
+
+  triggers.forEach(function (trigger, index) {
+    trigger.addEventListener("click", function () {
+      open(index);
+    });
+  });
+
+  lightbox.querySelectorAll("[data-lightbox-close]").forEach(function (button) {
+    button.addEventListener("click", close);
+  });
+
+  prev?.addEventListener("click", function () {
+    render(activeIndex - 1);
+  });
+
+  next?.addEventListener("click", function () {
+    render(activeIndex + 1);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (lightbox.hidden) return;
+    if (event.key === "Escape") close();
+    if (event.key === "ArrowLeft") render(activeIndex - 1);
+    if (event.key === "ArrowRight") render(activeIndex + 1);
   });
 })();
 
