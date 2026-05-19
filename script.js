@@ -138,7 +138,7 @@
       "contact.motto": "Efficiency is doing things right; effectiveness is doing the right things. -Peter F. Drucker",
       "feedback.question": "Was this homepage useful?",
       "feedback.yes": "Yes",
-      "feedback.thanks": "Good luck!"
+      "feedback.thanks": "Thank you!"
     },
     zh: {
       "nav.about": "简介",
@@ -532,7 +532,7 @@
 
   document.querySelectorAll("[data-feedback-yes]").forEach(function (button) {
     button.addEventListener("click", function () {
-      showToast(currentLang() === "zh" ? "感谢反馈" : "Good Luck!");
+      showToast(currentLang() === "zh" ? "感谢反馈" : "Thank you!");
       try {
         localStorage.setItem("homepage-feedback", "yes");
       } catch (error) {
