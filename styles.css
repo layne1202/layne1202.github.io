@@ -45,31 +45,6 @@ body::before {
   background: transparent;
 }
 
-.cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  width: 8.5rem;
-  height: 8.5rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(47, 111, 143, 0.16), rgba(47, 111, 143, 0.06) 42%, transparent 68%);
-  opacity: 0;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  transition: opacity 180ms ease, width 180ms ease, height 180ms ease;
-  will-change: transform, opacity;
-}
-
-.cursor-glow.is-active {
-  opacity: 1;
-}
-
-.cursor-glow.is-magnetic {
-  width: 10rem;
-  height: 10rem;
-}
-
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -348,6 +323,10 @@ a[aria-disabled="true"] {
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 0.5rem 1.6rem rgba(33, 37, 41, 0.1);
   backdrop-filter: blur(10px);
+}
+
+.language-switcher {
+  display: none;
 }
 
 .lang-button {
@@ -666,6 +645,16 @@ p {
   margin-bottom: 0.7rem;
 }
 
+.compact-list li {
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.compact-list li:hover,
+.compact-list li:focus-within {
+  color: var(--accent-dark);
+  transform: translateX(3px);
+}
+
 .theme-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -884,6 +873,13 @@ p {
 .skills-grid article {
   padding-top: 1rem;
   border-top: 1px solid var(--line);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.skills-grid article:hover,
+.skills-grid article:focus-within {
+  border-top-color: var(--accent);
+  transform: translateX(2px);
 }
 
 .selected-honors {
@@ -1052,7 +1048,7 @@ address {
 
 .contact-motto {
   max-width: 46rem;
-  margin: 2.4rem 0 0;
+  margin: 0;
   color: #465560;
   font-size: 1.02rem;
   font-weight: 600;
@@ -1074,16 +1070,18 @@ address {
   content: "";
   position: absolute;
   top: 0;
-  left: -35%;
+  left: -40%;
   width: 35%;
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(47, 111, 143, 0.85), transparent);
+  opacity: 0;
   transition: left 420ms ease;
 }
 
 .contact-card:hover::before,
 .contact-card:focus-within::before {
   left: 100%;
+  opacity: 1;
 }
 
 .contact-card p {
@@ -1341,16 +1339,9 @@ body.is-lightbox-open {
     display: none;
   }
 
-  .cursor-glow {
-    display: none;
-  }
 }
 
 @media (max-width: 992px) {
-  .cursor-glow {
-    display: none;
-  }
-
   .side-header {
     position: sticky;
     top: 0;
@@ -1381,12 +1372,6 @@ body.is-lightbox-open {
   .quick-actions {
     top: 4.75rem;
     right: 8.2rem;
-    z-index: 18;
-  }
-
-  .language-switcher {
-    top: 4.75rem;
-    right: 0.85rem;
     z-index: 18;
   }
 
@@ -1532,11 +1517,6 @@ body.dark-mode {
   background: #0b141c;
 }
 
-body.dark-mode .cursor-glow {
-  mix-blend-mode: screen;
-  background: radial-gradient(circle, rgba(125, 211, 252, 0.16), rgba(95, 168, 199, 0.06) 42%, transparent 68%);
-}
-
 body.dark-mode .hero-section {
   background:
     linear-gradient(90deg, rgba(11, 20, 28, 0.94) 0%, rgba(11, 20, 28, 0.84) 58%, rgba(11, 20, 28, 0.58) 100%),
@@ -1655,12 +1635,6 @@ body.dark-mode .ambient-particles {
     right: 8.2rem;
     z-index: 18;
     gap: 0.3rem;
-  }
-
-  .language-switcher {
-    top: 4.75rem;
-    right: 0.85rem;
-    z-index: 18;
   }
 
   .tool-button {
