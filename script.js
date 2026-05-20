@@ -430,7 +430,13 @@
     });
   }
 
+
   let storedLanguage = "en";
+  try {
+    storedLanguage = localStorage.getItem("homepage-language") || "en";
+  } catch (error) {
+    // Ignore storage failures; the page remains usable.
+  }
   applyLanguage(storedLanguage);
 })();
 
